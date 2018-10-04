@@ -4,18 +4,38 @@
     <meta charset="UTF-8">
     <title>Portfolio Widget</title>
 </head>
-<body>
+<body style = "background-color:#384be6;">
 <style>
-    .container {
 
-        width:700px;
-        height:auto;
-        font-family: "Segoe UI Light";
+    .mockpage {
+        position: absolute;
+        width: 70%;
+        height:100%;
+        left: 50%;
+        margin: 0 0 0 -35%;
+        background: #ffffff;
+        alignment: center;
+        padding:15px;
+    }
+
+    .container {
+        background: #384be6;
+        border-radius: 10px 10px 10px 10px;
+        width: 80%;
+        height: auto;
+        font-family: "Segoe UI Semibold";
         color: white;
-        font-size:17px;
+        font-size: 20px;
         position: relative;
         text-align: left;
         color: white;
+        margin: auto;
+        padding:10px;
+    }
+
+    .portfolio_image{
+        border-radius: 10px 10px 10px 10px;
+        border:2px solid white;
     }
 
     .bottom-left {
@@ -26,7 +46,8 @@
 
     /* top left*/
     .title {
-        font-size:27px;
+        font-family: "Segoe UI Semibold";
+        font-size: 27px;
         color: #767676;
         position: absolute;
         top: 8px;
@@ -45,8 +66,8 @@
     .date {
         position: absolute;
         text-align: right;
-        top: 8px;
-        right: 16px;
+        top: 15px;
+        right: 25px;
     }
 
     .bottom-right {
@@ -66,16 +87,20 @@
 <h2>Image Text</h2>
 <p>How to place text over an image:</p>
 
-<div class="container" >
-    <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" alt="Snow" width="100%" height = "100%">
-    <div class="title">Title</div>
-    <div class="date">June 2018</div>
-    <div class="summary">
-        Here we can see an amazing invention made by me<br>
-        I can't believe we made this in 4 weeks<br>
-        Lets go party
+
+<div class="mockpage">
+    <div class="container">
+        <img src="..\Content\BroombaRidingPic.png" class = "portfolio_image" alt="Snow" width="100%" height="100%">
+        <div class="title">Title</div>
+        <div class="date">June 2018</div>
+        <div class="summary">
+            Here we can see an amazing invention made by me<br>
+            I can't believe we made this in 4 weeks<br>
+            Lets go party
+        </div>
     </div>
 </div>
+
 
 </body>
 </html>
