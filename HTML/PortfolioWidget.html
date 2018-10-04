@@ -4,94 +4,119 @@
     <meta charset="UTF-8">
     <title>Portfolio Widget</title>
 </head>
-<body style = "background-color:#384be6;">
+<body style="background-color:#384be6;">
 <style>
-
     .mockpage {
         position: absolute;
         width: 70%;
-        height:100%;
+        height: 100%;
         left: 50%;
         margin: 0 0 0 -35%;
         background: #ffffff;
         alignment: center;
-        padding:15px;
-    }
-
-    .container {
-        background: #384be6;
-        border-radius: 10px 10px 10px 10px;
-        width: 80%;
-        height: auto;
-        font-family: "Segoe UI Semibold";
-        color: white;
-        font-size: 20px;
-        position: relative;
-        text-align: left;
-        color: white;
-        margin: auto;
-        padding:10px;
-    }
-
-    .portfolio_image{
-        border-radius: 10px 10px 10px 10px;
-        border:2px solid white;
-    }
-
-    .bottom-left {
-        position: absolute;
-        bottom: 8px;
-        left: 16px;
-    }
-
-    /* top left*/
-    .title {
-        font-family: "Segoe UI Semibold";
-        font-size: 27px;
-        color: #767676;
-        position: absolute;
-        top: 8px;
-        left: 16px;
-
-    }
-
-    /* under title*/
-    .summary {
-        position: absolute;
-        top: 48px;
-        left: 16px;
-    }
-
-    /* top right*/
-    .date {
-        position: absolute;
-        text-align: right;
-        top: 15px;
-        right: 25px;
-    }
-
-    .bottom-right {
-        position: absolute;
-        bottom: 8px;
-        right: 16px;
-    }
-
-    .centered {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        padding: 15px;
     }
 </style>
 
-<h2>Image Text</h2>
-<p>How to place text over an image:</p>
 
 
 <div class="mockpage">
+
+
+    <style>
+
+
+        .container {
+        / / background: #384be6;
+            border-radius: 10px 10px 10px 10px;
+
+            width: 80%;
+            height: auto;
+            font-family: "Segoe UI Light";
+            color: white;
+            font-size: 20px;
+            position: relative;
+            text-align: left;
+            color: white;
+            margin: auto;
+            padding: 10px;
+        }
+
+        .trapezoid_big {
+            border-bottom-left-radius: 10px;
+            border-top-right-radius: 200px;
+            position: absolute;
+            bottom: 15px;
+            left: 12px;
+            width: 500px;
+            height: 180px;
+            background: #4f66ff;
+
+        }
+
+        .portfolio_image {
+            border-radius: 10px 10px 10px 10px;
+            border: 2px solid white;
+        }
+
+        .bottom-left {
+            position: absolute;
+            bottom: 10px;
+            left: 16px;
+        }
+
+        /* top left*/
+        .title {
+            font-family: "Segoe UI Semibold";
+            font-size: 57px;
+            color: #254376;
+            position: absolute;
+            top: 20px;
+            left: 16px;
+
+        }
+
+        /* under title*/
+        .summary {
+        / / color: black;
+            position: absolute;
+            bottom: 78px;
+            left: 16px;
+        }
+
+        /* top right*/
+        .date {
+            position: absolute;
+            text-align: right;
+            top: 15px;
+            right: 25px;
+        }
+
+        .bottom-right {
+            position: absolute;
+            bottom: 8px;
+            right: 16px;
+        }
+
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+
+    <script>
+        function dothis(){
+            document.getElementById("title1").innerText= "YAP";
+        }
+
+    </script>
+
     <div class="container">
-        <img src="..\Content\BroombaRidingPic.png" class = "portfolio_image" alt="Snow" width="100%" height="100%">
-        <div class="title">Title</div>
+        <img src="..\Content\BroombaRidingPic.png" class="portfolio_image" alt="Snow" width="100%" height="100%">
+        <div class="trapezoid_big"></div>
+        <div id="title1" class="title">Broomba</div>
         <div class="date">June 2018</div>
         <div class="summary">
             Here we can see an amazing invention made by me<br>
@@ -99,6 +124,10 @@
             Lets go party
         </div>
     </div>
+
+    <button onclick= "dothis()">BUTTON</button>
+
+
 </div>
 
 
