@@ -19,8 +19,7 @@ var CRUSH_ARR = PI_Arr_init(
     6,//importance
     "http://rcastro.mit.edu/sites/default/files/CRUSH_3JEER.png", //picture
     "rcastro.mit.edu",     //url
-    "rcastro.mit.edu"     //build_blog redirect
-    ,
+    "rcastro.mit.edu",     //build_blog redirect
     false //inprogress
 );
 
