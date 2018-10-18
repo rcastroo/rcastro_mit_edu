@@ -75,12 +75,12 @@
             margin: 40px auto;
         }
         .container_small{
-        / / background: #384be6;
+        // background: #384be6;
             border-radius: 10px 10px 10px 10px;
             //right: 10%;
             display:inline-block;
             width: 40%;
-            height: 350px;
+            height: 85%;
             font-family: "Segoe UI Light";
             color: white;
             font-size: 20px;
@@ -88,7 +88,7 @@
             text-align: left;
             color: white;
 
-            margin: 40px  5%;
+            margin: 30px  5%;
 
         }
         .container_small_right {
@@ -177,6 +177,13 @@
             left: 16px;
         }
 
+        .summary-small {
+        / / color: black;
+            position: absolute;
+            bottom: 58px;
+            left: 16px;
+        }
+
         /* top right*/
         .date {
             position: absolute;
@@ -200,9 +207,18 @@
     </style>
 
     <!--Script to restructure it all-->
+    <script src="sites/default/files/PortfolioItems.js"></script>
+
     <script src="sites/default/files/PortfolioWidget_JS.js"></script>
+
     <!--<object id="first" data="sites/default/files/PortfolioItems/Test.html"></object>-->
-    <button onclick= "test0()">BUTTONIS HEREEEEEE</button>
+    <script>
+        function putItems(){
+            test0(loadItems(portfolioItemArr));
+        }
+    </script>
+
+    <button onclick= "putItems()">BUTTONIS HEREEEEEE</button>
 
     <div class="container_all">
         <div id="test_container" style="background: red">TESTING CONT</div>

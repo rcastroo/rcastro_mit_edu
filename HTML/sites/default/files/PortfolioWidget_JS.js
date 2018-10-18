@@ -6,9 +6,12 @@ dothis();
 
 
 // importance(1-10max)
-function PortfolioItem(title, summary,type,  importance, picture, url, buildBlog_redirect, inProgress) {
+function PortfolioItem(title, summary,date, type,  importance, picture, url, buildBlog_redirect, inProgress) {
+    document.getElementById("test_container").innerText = "GOT HERE-0.6";
     this.title = title;
     this.summary = summary;
+    this.date = date;
+
     this.type =type;
     this.importance = importance;
     this.picture = picture;
@@ -19,10 +22,18 @@ function PortfolioItem(title, summary,type,  importance, picture, url, buildBlog
 }
 
 function loadItems(portfolioItems){ //used to inject javascript array that contains all the information from each project
+   // document.getElementById("test_container").innerText = "GOT HERE-1";
+
     var items = [];
     portfolioItems.forEach(function(PI_ARR){
-       items.push(new PortfolioItem(PI_ARR[0],PI_ARR[1],PI_ARR[2],PI_ARR[3],PI_ARR[4]
-           ,PI_ARR[5],PI_ARR[6],PI_ARR[7],));
+        //items.push(PI_ARR);
+
+     //   document.getElementById("test_container").innerText = portfolioItems;
+      //  document.getElementById("test_container").innerText = PI_ARR;
+         var pi = new PortfolioItem(PI_ARR[0],PI_ARR[1],PI_ARR[2],PI_ARR[3],PI_ARR[4]
+            ,PI_ARR[5],PI_ARR[6],PI_ARR[7],PI_ARR[8]);
+        items.push(pi);
+
     });
     return items;
 }
@@ -43,20 +54,11 @@ function generatePage(width, portfolioItems){
 
 
 
-function test0(){
-    document.getElementById("test_container").innerText = "GOT HERE00";
-
-    var PI1 = new PortfolioItem("CRUSH", "THIS IS CRUSH\n" + "YAP", "EMBEDDED",8,"http://rcastro.mit.edu/sites/default/files/CRUSH_3JEER.png"
-    , "rcastro.mit.edu","rcastro.mit.edu",true);
-    var PI2 = new PortfolioItem("CRUSH2", "THIS IS CRUSH\n" + "YAP", "EMBEDDED",8,"http://rcastro.mit.edu/sites/default/files/CRUSH_3JEER.png"
-        , "rcastro.mit.edu","rcastro.mit.edu",true);
-
-    var box = generateHBox_double(600, PI1,PI2);
-
-
-    var text = document.createElement('p');
-    text.innerText = "FADSFSDFSADF\nsdafadsfsdafds";
+function test0(portfolioItems){
+    var box = generateHBox_double(600, portfolioItems[0],portfolioItems[1]);
     document.getElementById("test_container").appendChild(box);
+    var box2 = generateHBox_double(600, portfolioItems[2],portfolioItems[3]);
+    document.getElementById("test_container").appendChild(box2);
 }
 function generateHBox_double(width, PI1, PI2){
     var HBox = document.createElement('div');
@@ -73,7 +75,7 @@ function generateHBox_single(width, PI1){
     var HBox = document.createElement('div');
    // HBox.style = "background: blue;";
     HBox.className = "HBox";
-
+    PI1.HTMLcontainer.getElementById("")
     HBox.appendChild(PI1.HTMLcontainer);
 
     return HBox;
@@ -108,8 +110,8 @@ function generatePISkeleton(portfolioItem){
     container.appendChild(date);
 
     var summary = document.createElement('div');
-    summary_trapezoid.id = portfolioItem + "_PI_SUMMARY";
-    summary.className = "summary";
+    summary.id = portfolioItem + "_PI_SUMMARY";
+    summary.className = "summary-small";
     summary.innerText = portfolioItem.summary;
     container.appendChild(summary);
 
