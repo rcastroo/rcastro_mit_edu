@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="865b82ca-c279-478a-8e5c-e0a375c74894" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTML/PortfolioWidget.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/PortfolioWidget.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTML/sites/default/files/PortfolioItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/sites/default/files/PortfolioItems.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTML/sites/default/files/PortfolioWidget_JS.js" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/sites/default/files/PortfolioWidget_JS.js" afterDir="false" />
@@ -32,7 +31,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Rportfolioitem" value="8" />
-          <entry key="css" value="4" />
+          <entry key="css" value="5" />
           <entry key="html" value="9" />
           <entry key="js" value="7" />
           <entry key="md" value="2" />
@@ -41,7 +40,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="4" />
+          <entry key="CSS" value="5" />
           <entry key="HTML" value="9" />
           <entry key="Image" value="1" />
           <entry key="JavaScript" value="7" />
@@ -51,28 +50,28 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Rportfolioitem" value="222" />
-          <entry key="html" value="2764" />
-          <entry key="js" value="5811" />
+          <entry key="html" value="2936" />
+          <entry key="js" value="6162" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="2764" />
-          <entry key="JavaScript" value="5811" />
+          <entry key="HTML" value="2936" />
+          <entry key="JavaScript" value="6162" />
           <entry key="PLAIN_TEXT" value="222" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.40763834">
+    <splitter split-orientation="horizontal" split-proportion="0.63055336">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/HTML/sites/default/files/PortfolioWidget_JS.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="48">
-                  <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+                <state relative-caret-position="113">
+                  <caret line="87" column="43" lean-forward="true" selection-start-line="87" selection-start-column="43" selection-end-line="87" selection-end-column="43" />
                 </state>
               </provider>
             </entry>
@@ -84,8 +83,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/HTML/PortfolioWidget.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
-                  <caret line="28" column="16" lean-forward="true" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+                <state relative-caret-position="187">
+                  <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
                   <folding>
                     <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -97,8 +96,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/HTML/sites/default/files/PortfolioItems.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="303">
-                  <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
+                <state relative-caret-position="504">
+                  <caret line="82" column="2" lean-forward="true" selection-start-line="82" selection-start-column="2" selection-end-line="82" selection-end-column="2" />
                 </state>
               </provider>
             </entry>
@@ -258,12 +257,12 @@
       <workItem from="1538696691450" duration="3388000" />
       <workItem from="1538959445564" duration="5762000" />
       <workItem from="1539657617770" duration="10068000" />
-      <workItem from="1539836885908" duration="3119000" />
+      <workItem from="1539836885908" duration="5665000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34355000" />
+    <option name="totallyTimeSpent" value="36901000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -322,35 +321,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HTML/sites/default/files/PortfolioWidget_CSS.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="123" column="17" selection-start-line="123" selection-start-column="17" selection-end-line="123" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HTML/sites/default/files/PortfolioItems.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
+        <state relative-caret-position="504">
+          <caret line="82" column="2" lean-forward="true" selection-start-line="82" selection-start-column="2" selection-end-line="82" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HTML/sites/default/files/PortfolioWidget_JS.js">
+    <entry file="file://$PROJECT_DIR$/HTML/sites/default/files/PortfolioWidget_CSS.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+        <state relative-caret-position="164">
+          <caret line="107" column="15" lean-forward="true" selection-start-line="107" selection-start-column="15" selection-end-line="107" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HTML/PortfolioWidget.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="28" column="16" lean-forward="true" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+        <state relative-caret-position="187">
+          <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/sites/default/files/PortfolioWidget_JS.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="87" column="43" lean-forward="true" selection-start-line="87" selection-start-column="43" selection-end-line="87" selection-end-column="43" />
         </state>
       </provider>
     </entry>

@@ -7,7 +7,7 @@ dothis();
 
 // importance(1-10max)
 function PortfolioItem(title, summary,date, type,  importance, picture, url, buildBlog_redirect, inProgress) {
-    document.getElementById("test_container").innerText = "GOT HERE-0.6";
+   // document.getElementById("test_container").innerText = "GOT HERE-0.6";
     this.title = title;
     this.summary = summary;
     this.date = date;
@@ -55,6 +55,9 @@ function generatePage(width, portfolioItems){
 
 
 function test0(portfolioItems){
+    var bigbox = generateHBox_single(600, portfolioItems[4]);
+    document.getElementById("test_container").appendChild(bigbox);
+
     var box = generateHBox_double(600, portfolioItems[0],portfolioItems[1]);
     document.getElementById("test_container").appendChild(box);
     var box2 = generateHBox_double(600, portfolioItems[2],portfolioItems[3]);
@@ -74,8 +77,8 @@ function generateHBox_double(width, PI1, PI2){
 function generateHBox_single(width, PI1){
     var HBox = document.createElement('div');
    // HBox.style = "background: blue;";
-    HBox.className = "HBox";
-    PI1.HTMLcontainer.getElementById("")
+    HBox.className = "HBox_big";
+    PI1.HTMLcontainer.className= "container_big";
     HBox.appendChild(PI1.HTMLcontainer);
 
     return HBox;
@@ -87,14 +90,15 @@ function generatePISkeleton(portfolioItem){
     container.id = portfolioItem.title + "_PI_CONTAINER";
     container.className = "container_small";
 
-    var image = document.createElement('img');
-    image.src = portfolioItem.picture;
+    var image = document.createElement('div');
+    //image.src = portfolioItem.picture;
+    image.style.backgroundImage = "url(" +portfolioItem.picture+")";
     image.className = "portfolio_image";
     container.appendChild(image);
 
     var summary_trapezoid = document.createElement('div');
     summary_trapezoid.id = portfolioItem + "_PI_SUMMARYTRAPEZOID";
-    summary_trapezoid.className =  "trapezoid_small";
+    summary_trapezoid.className =  "trapezoid";
     container.appendChild(summary_trapezoid);
 
     var title = document.createElement('div');
@@ -111,7 +115,7 @@ function generatePISkeleton(portfolioItem){
 
     var summary = document.createElement('div');
     summary.id = portfolioItem + "_PI_SUMMARY";
-    summary.className = "summary-small";
+    summary.className = "summary";
     summary.innerText = portfolioItem.summary;
     container.appendChild(summary);
 
