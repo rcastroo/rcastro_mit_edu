@@ -15,22 +15,24 @@ const CRUSH_ARR = [
     "http://rcastro.mit.edu/sites/default/files/CRUSH_3JEER.png", //picture
     "rcastro.mit.edu",     //url
     "rcastro.mit.edu",     //build_blog redirect
+    "Mechanical;Robotics",
     false //inprogress
 ];
 
 const CRUSH2_ARR = [
     "CRUSH2",  //title
     //summary
-    "Here we can see the awesome things we can achieve in a team\n" +
+    "Here we can see the awesome things we can achieve in a team" +
             "I love pancakes" +
         "Woop woooooop"
     ,
     "10/16/18",
-    "MECHE",
+    "SCIENCE",
     6,//importance
     "http://rcastro.mit.edu/sites/default/files/CRUSH_3JEER.png", //picture
     "rcastro.mit.edu",     //url
     "rcastro.mit.edu",     //build_blog redirect
+    "Biology;Taco",
     false //inprogress
 ];
 
@@ -42,11 +44,12 @@ const CRUSH3_ARR = [
     "Woop woooooop"
     ,
     "10/16/18",
-    "MECHE",
+    "WEBDEV",
     6,//importance
     "http://rcastro.mit.edu/sites/default/files/CRUSH_3JEER.png", //picture
     "rcastro.mit.edu",     //url
     "rcastro.mit.edu",     //build_blog redirect
+    "Web;Burrito", //tags
     false //inprogress
 ];
 
@@ -58,18 +61,19 @@ const CRUSH4_ARR = [
     "Woop woooooop"
     ,
     "10/16/18",
-    "MECHE",
+    "OTHER",
     6,//importance
     "http://rcastro.mit.edu/sites/default/files/CRUSH_3JEER.png", //picture
     "rcastro.mit.edu",     //url
     "rcastro.mit.edu",     //build_blog redirect
+    "Art;Portfolio",
     false //inprogress
 ];
 
 const CRUSH5_ARR = [
     "CRUSH5",  //title
     //summary
-    "Here we can see the awesome things we can achieve in a team\n" +
+    "Here we can see the awesome things we can achieve in a team" +
     "I love pancakes" +
     "Woop woooooop"
     ,
@@ -79,6 +83,7 @@ const CRUSH5_ARR = [
     "http://rcastro.mit.edu/sites/default/files/CRUSH_3JEER.png", //picture
     "rcastro.mit.edu",     //url
     "rcastro.mit.edu",     //build_blog redirect
+    "Mechanical;Design",
     false //inprogress
 ];
 

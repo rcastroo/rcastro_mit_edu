@@ -37,7 +37,7 @@
 
         .HBox_big{
             display:inline-block;
-            background: #384be6;
+            background: #fffdf4;
             width:88%;
             height:40vw;
             margin:0px 6%;
@@ -46,7 +46,7 @@
 
         .HBox{
             display:inline-block;
-            background: #384be6;
+            background: #fffdf4;
             width:88%;
             height:28vw;
             margin:0px 6%;
@@ -59,7 +59,6 @@
             width: 96%;
             height: 85%;
             font-family: "Segoe UI Light";
-            color: white;
             font-size: 20px;
             position: relative;
             text-align: left;
@@ -74,7 +73,6 @@
             width: 46%;
             height: 85%;
             font-family: "Segoe UI Light";
-            color: white;
             font-size: 20px;
             position: relative;
             text-align: left;
@@ -83,15 +81,20 @@
             margin: 30px  2%;
 
         }
+
+        .tag{
+            
+        }
+
         .trapezoid{
-            border-bottom-left-radius: 10px;
+            border-bottom-left-radius: 30px;
             border-top-right-radius: 200px;
             position: absolute;
             bottom: 0px;
             left: 0px;
-            width: 75%;
-            height: 40%;
-            background: #4f66ff;
+            width: 45% ;
+            height: 15%;
+            background: rgba(79,102,255,0.7);
 
         }
         .portfolio_image{
@@ -116,10 +119,22 @@
 
         /* under title*/
         .summary {
-        / / color: black;
+
+            // color: black;
+            background: rgba(79,102,255,0.7);
+            padding:2%;
+            /*border-bottom-left-radius: 10px;*/
+            /*border-bottom-right-radius: 10px;*/
+            border-radius: 10px;
             position: absolute;
-            bottom: 15%;
-            left: 16px;
+            font-size:18px;
+            bottom: 0px;
+            width:96%;
+            height: 40%;
+            overflow: hidden;
+            /*white-space: nowrap; !* Don't forget this one *!*!*/
+            /*text-overflow: ellipsis;*/
+
         }
 
         /* top right*/
@@ -142,12 +157,18 @@
         function putItems(){
             test0(loadItems(portfolioItemArr));
         }
+
+        // function test2(){
+        //     document.getElementById("mainBut").style.display = "hidden";
+        // }
+
     </script>
 
     <button onclick= "putItems()">BUTTONIS HEREEEEEE</button>
+    <!--<button onclick= "test2()">TOGGLETHANG</button>-->
 
     <div class="container_all">
-        <div id="test_container" style="background: red">TESTING CONT</div>
+        <div id="test_container" style="background: #fffdf4">TESTING CONT</div>
         <!--<div class="container_big">-->
             <!--<img src="sites\default\files\BroombaRidingPic.png" class="portfolio_image_big" width="100%" height="100%">-->
             <!--<div class="trapezoid_big"></div>-->
