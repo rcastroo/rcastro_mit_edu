@@ -11,10 +11,10 @@ const CRUSH_ARR = [
     ,
     "10/16/18",
     "MECHE",
-    6,//importance
+    7,//importance
     "http://rcastro.mit.edu/sites/default/files/CRUSH_3JEER.png", //picture
-    "rcastro.mit.edu",     //url
-    "rcastro.mit.edu",     //build_blog redirect
+    "https://rcastro.mit.edu",     //url
+    "https://rcastro.mit.edu",     //build_blog redirect
     "Mechanical;Robotics",
     false //inprogress
 ];
@@ -28,10 +28,10 @@ const CRUSH2_ARR = [
     ,
     "10/16/18",
     "SCIENCE",
-    6,//importance
+    4,//importance
     "http://rcastro.mit.edu/sites/default/files/CRUSH_3JEER.png", //picture
-    "rcastro.mit.edu",     //url
-    "rcastro.mit.edu",     //build_blog redirect
+    "https://rcastro.mit.edu",     //url
+    "https://rcastro.mit.edu",     //build_blog redirect
     "Biology;Taco",
     false //inprogress
 ];
@@ -47,8 +47,8 @@ const CRUSH3_ARR = [
     "WEBDEV",
     6,//importance
     "http://rcastro.mit.edu/sites/default/files/CRUSH_3JEER.png", //picture
-    "rcastro.mit.edu",     //url
-    "rcastro.mit.edu",     //build_blog redirect
+    "https://rcastro.mit.edu",     //url
+    "https://rcastro.mit.edu",     //build_blog redirect
     "Web;Burrito", //tags
     false //inprogress
 ];
@@ -64,9 +64,9 @@ const CRUSH4_ARR = [
     "OTHER",
     6,//importance
     "http://rcastro.mit.edu/sites/default/files/CRUSH_3JEER.png", //picture
-    "rcastro.mit.edu",     //url
-    "rcastro.mit.edu",     //build_blog redirect
-    "Art;Portfolio",
+    "https://rcastro.mit.edu",     //url
+    "https://rcastro.mit.edu",     //build_blog redirect
+    "Art;Portfolio;New Age",
     false //inprogress
 ];
 
@@ -79,13 +79,32 @@ const CRUSH5_ARR = [
     ,
     "10/16/18",
     "MECHE",
-    6,//importance
+    1,//importance
     "http://rcastro.mit.edu/sites/default/files/CRUSH_3JEER.png", //picture
-    "rcastro.mit.edu",     //url
-    "rcastro.mit.edu",     //build_blog redirect
-    "Mechanical;Design",
+    "https://rcastro.mit.edu",     //url
+    "https://rcastro.mit.edu",     //build_blog redirect
+    "Mechanical;Design;Super Cool Concept",
     false //inprogress
 ];
 
 
-const portfolioItemArr = [CRUSH_ARR, CRUSH2_ARR,CRUSH3_ARR, CRUSH4_ARR, CRUSH5_ARR];
+const CRUSH6_ARR = [
+    "CRUSH6",  //title
+    //summary
+    "Here we can see the awesome things we can achieve in a team" +
+    "I love pancakes" +
+    "Woop woooooop"
+    ,
+    "10/16/18",
+    "MECHE",
+    1,//importance
+    "http://rcastro.mit.edu/sites/default/files/CRUSH_3JEER.png", //picture
+    "https://rcastro.mit.edu",     //url
+    "https://rcastro.mit.edu",     //build_blog redirect
+    "Mechanical;Design;Super Cool Concept",
+    false //inprogress
+];
+
+
+const portfolioItemArr = [CRUSH_ARR, CRUSH2_ARR,CRUSH3_ARR, CRUSH4_ARR, CRUSH5_ARR,
+CRUSH6_ARR];

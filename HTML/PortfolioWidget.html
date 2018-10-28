@@ -4,160 +4,224 @@
     <meta charset="UTF-8">
     <title>Portfolio Widget</title>
 </head>
-<body style="background-color:#384be6;">
 <style>
     .mockpage {
         position: absolute;
         width: 70%;
-        height: 2000px;
+        height: 3000px;
         left: 50%;
         margin: 100px 0 0 -35%;
         background: #ffffff;
         alignment: center;
 
     }
-
+    .background{
+        background-image: url("sites/default/files/wallpaper.jpg");
+       // background-color: #384be6;
+    }
 
 </style>
+<body class = "background">
 
+
+<script src="sites/default/files/PortfolioItems.js"></script>
+
+<script src="sites/default/files/PortfolioWidget_JS.js"></script>
 
 <div class="mockpage">
 
 
     <style>
 
-        /*Used to reset to blank slate*/
-        .container_all {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
+    /*Used to reset to blank slate*/
+    .container_all {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
 
-        }
+    }
 
-        .HBox_big{
-            display:inline-block;
-            background: #fffdf4;
-            width:88%;
-            height:40vw;
-            margin:0px 6%;
+    .HBox_mobile{
+        display:inline-block;
+        background: #fffdf4;
+        width:88%;
+        height:60vw;
+        margin:0px 6%;
 
-        }
+    }
 
-        .HBox{
-            display:inline-block;
-            background: #fffdf4;
-            width:88%;
-            height:28vw;
-            margin:0px 6%;
-        }
+    .selectionBar{
+        background: #6593F5;
+        display:inline-block;
+        width:78%;
+        height:60px;
+        margin: 0px 8% 30px;
+        border-radius: 30px ;
+        padding:0px 3%;
+        overflow: hidden;
+    }
 
-        .container_big {
-        / / background: #384be6;
-            border-radius: 10px 10px 10px 10px;
+    .selectionButton{
+        display:inline-block;
+        border-radius:15px;
+        font-family: "Segoe UI Semibold";
+        border: 1px solid white;
+        font-size: 18px;
+        height: 30px;
+        color: white;
+        opacity: 1.0;
+        padding: 4px 10px 0px;
+        margin: 10px 5px;
+        cursor: default;
+    }
 
-            width: 96%;
-            height: 85%;
-            font-family: "Segoe UI Light";
-            font-size: 20px;
-            position: relative;
-            text-align: left;
-            color: white;
-            margin: 40px 2%;
-        }
-        .container_small{
-        // background: #384be6;
-            border-radius: 10px 10px 10px 10px;
-            //right: 10%;
-            display:inline-block;
-            width: 46%;
-            height: 85%;
-            font-family: "Segoe UI Light";
-            font-size: 20px;
-            position: relative;
-            text-align: left;
-            color: white;
+    .selectionButton:hover{
+        opacity:0.7;
+    }
+    .selectionButton:active{
+        opacity:0.5;
+    }
 
-            margin: 30px  2%;
+    .HBox_big{
+        display:inline-block;
+        width:88%;
+        height:40vw;
+        margin:0px 6%;
 
-        }
+    }
 
-        .tag{
-            
-        }
+    .HBox{
+        display:inline-block;
+        width:88%;
+        height:28vw;
+        margin:0px 6%;
+    }
 
-        .trapezoid{
-            border-bottom-left-radius: 30px;
-            border-top-right-radius: 200px;
-            position: absolute;
-            bottom: 0px;
-            left: 0px;
-            width: 45% ;
-            height: 15%;
-            background: rgba(79,102,255,0.7);
+    .container_big {
+    / / background: #384be6;
+        border-radius: 10px 10px 10px 10px;
 
-        }
-        .portfolio_image{
-            width: 100%;
-            height: 100%;
-            border-radius: 10px 10px 10px 10px;
-            background-position: center;
-            background-size: cover;
-        }
+        width: 96%;
+        height: 85%;
+        font-family: "Segoe UI Light";
+        font-size: 20px;
+        position: relative;
+        text-align: left;
+        color: white;
+        margin: 2% 2%;
+        overflow: hidden;
+    }
+    .container_small{
+    // background: #384be6;
+        border-radius: 10px 10px 10px 10px;
+    //right: 10%;
+        display:inline-block;
+        width: 46%;
+        height: 85%;
+        font-family: "Segoe UI Light";
+        font-size: 20px;
+        position: relative;
+        text-align: left;
+        color: white;
+        overflow: hidden;
+        margin: 2%  2%;
+
+    }
+
+    .tagsBox{
+        width:35%;
+        position:absolute;
+        bottom:0;
+        left:0;
+        height:35px;
+        overflow: hidden;
+        margin: 10px;
+        z-index: 200;
+    }
+
+    .tag{
+        display:inline-block;
+        border-radius:10px;
+        font-family: "Segoe UI Light";
+        font-size: 16px;
+        height: 30px;
+        color: white;
+        border: 1px solid white;
+        padding:2px 7px 0px 7px;
+        margin: 0px 2px;
+    }
+
+    .trapezoid{
+        border-bottom-left-radius: 30px;
+        border-top-right-radius: 200px;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 45% ;
+        height: 60px;
+        background: rgba(79,102,255,0.7);
+
+    }
+    .portfolio_image{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px 10px 10px 10px;
+        background-position: center;
+        background-size: cover;
+    }
 
 
-        /* top left*/
-        .title {
-            font-family: "Segoe UI Semibold";
-            font-size: 57px;
-            color: #254376;
-            position: absolute;
-            top: 20px;
-            left: 16px;
 
-        }
 
-        /* under title*/
-        .summary {
+    /* under title*/
+    .summary {
 
-            // color: black;
-            background: rgba(79,102,255,0.7);
-            padding:2%;
-            /*border-bottom-left-radius: 10px;*/
-            /*border-bottom-right-radius: 10px;*/
-            border-radius: 10px;
-            position: absolute;
-            font-size:18px;
-            bottom: 0px;
-            width:96%;
-            height: 40%;
-            overflow: hidden;
-            /*white-space: nowrap; !* Don't forget this one *!*!*/
-            /*text-overflow: ellipsis;*/
+    // color: black;
+        background: rgba(79,102,255,0.7);
+        padding:2%;
+        /*border-bottom-left-radius: 10px;*/
+        /*border-bottom-right-radius: 10px;*/
+        border-radius: 10px;
+        position: absolute;
+        font-size:18px;
+        bottom: 0px;
+        width:96%;
+        height: 40%;
+        overflow: hidden;
+        /*white-space: nowrap; !* Don't forget this one *!*!*/
+        /*text-overflow: ellipsis;*/
 
-        }
+    }
+    /* top left*/
+    .title {
+        font-family: "Segoe UI Semibold";
+        font-size: 57px;
+        color: #ffffff;
+        position: absolute;
+        top: 0px;
+        left: 16px;
 
-        /* top right*/
-        .date {
-            position: absolute;
-            text-align: right;
-            top: 15px;
-            right: 25px;
-        }
 
-    </style>
+    }
+
+    /* top right*/
+    .date {
+        position: absolute;
+        text-align: right;
+        top: 15px;
+        right: 25px;
+    }
+
+</style>
 
     <!--Script to restructure it all-->
-    <script src="sites/default/files/PortfolioItems.js"></script>
-
-    <script src="sites/default/files/PortfolioWidget_JS.js"></script>
 
     <!--<object id="first" data="sites/default/files/PortfolioItems/Test.html"></object>-->
     <script>
         function putItems(){
             test0(loadItems(portfolioItemArr));
         }
-
         // function test2(){
         //     document.getElementById("mainBut").style.display = "hidden";
         // }
@@ -166,46 +230,49 @@
 
     <button onclick= "putItems()">BUTTONIS HEREEEEEE</button>
     <!--<button onclick= "test2()">TOGGLETHANG</button>-->
-
+    <p id="DEBUG_1">Hellooo</p>
     <div class="container_all">
         <div id="test_container" style="background: #fffdf4">TESTING CONT</div>
         <!--<div class="container_big">-->
-            <!--<img src="sites\default\files\BroombaRidingPic.png" class="portfolio_image_big" width="100%" height="100%">-->
-            <!--<div class="trapezoid_big"></div>-->
-            <!--<div id="title1" class="title">Broomba</div>-->
-            <!--<div class="date">June 2018</div>-->
-            <!--<div class="summary">-->
-                <!--Here we can see an amazing invention made by me<br>-->
-                <!--I can't believe we made this in 4 weeks<br>-->
-                <!--Lets go party-->
-            <!--</div>-->
+        <!--<img src="sites\default\files\BroombaRidingPic.png" class="portfolio_image_big" width="100%" height="100%">-->
+        <!--<div class="trapezoid_big"></div>-->
+        <!--<div id="title1" class="title">Broomba</div>-->
+        <!--<div class="date">June 2018</div>-->
+        <!--<div class="summary">-->
+        <!--Here we can see an amazing invention made by me<br>-->
+        <!--I can't believe we made this in 4 weeks<br>-->
+        <!--Lets go party-->
+        <!--</div>-->
         <!--</div>-->
 
         <!--<div class="container_small_left">-->
-            <!--<img src="sites\default\files\CRUSH_3JEER.png" class="portfolio_image_small_two" width="100%" height="100%">-->
-            <!--<div class="trapezoid_small"></div>-->
-            <!--<div class="title">CRUSH</div>-->
-            <!--<div class="date">June 2018</div>-->
-            <!--<div class="summary">-->
-                <!--Here we can see an amazing invention made by me<br>-->
-                <!--I can't believe we made this in 4 weeks<br>-->
-                <!--Lets go party-->
-            <!--</div>-->
+        <!--<img src="sites\default\files\CRUSH_3JEER.png" class="portfolio_image_small_two" width="100%" height="100%">-->
+        <!--<div class="trapezoid_small"></div>-->
+        <!--<div class="title">CRUSH</div>-->
+        <!--<div class="date">June 2018</div>-->
+        <!--<div class="summary">-->
+        <!--Here we can see an amazing invention made by me<br>-->
+        <!--I can't believe we made this in 4 weeks<br>-->
+        <!--Lets go party-->
+        <!--</div>-->
         <!--</div>-->
 
         <!--<div class="container_small_right">-->
-            <!--<img src="sites\default\files\picborbend_full.png" class="portfolio_image_small_two" width="100%" height="100%">-->
-            <!--<div class="trapezoid_small"></div>-->
-            <!--<div id = "title2" class="title">Container</div>-->
-            <!--<div class="date">June 2018</div>-->
-            <!--<div class="summary">-->
-                <!--Here we can see an amazing invention made by me<br>-->
-                <!--I can't believe we made this in 4 weeks<br>-->
-                <!--Lets go party-->
-            <!--</div>-->
+        <!--<img src="sites\default\files\picborbend_full.png" class="portfolio_image_small_two" width="100%" height="100%">-->
+        <!--<div class="trapezoid_small"></div>-->
+        <!--<div id = "title2" class="title">Container</div>-->
+        <!--<div class="date">June 2018</div>-->
+        <!--<div class="summary">-->
+        <!--Here we can see an amazing invention made by me<br>-->
+        <!--I can't believe we made this in 4 weeks<br>-->
+        <!--Lets go party-->
+        <!--</div>-->
         <!--</div>-->
 
+        <script>
 
+            putItems();
+        </script>
     </div>
 
 
@@ -216,6 +283,7 @@
 
 
 </div>
+
 
 
 </body>

@@ -4,6 +4,7 @@
     <list default="true" id="865b82ca-c279-478a-8e5c-e0a375c74894" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTML/PortfolioWidget.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/PortfolioWidget.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/sites/default/files/Blue-Wallpaper-For-Background-16.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/HTML/sites/default/files/PortfolioItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/sites/default/files/PortfolioItems.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTML/sites/default/files/PortfolioWidget_JS.js" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/sites/default/files/PortfolioWidget_JS.js" afterDir="false" />
     </list>
@@ -20,59 +21,63 @@
     <session id="-479818437">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.open.time.8" value="4" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Rportfolioitem" value="8" />
           <entry key="css" value="5" />
-          <entry key="html" value="9" />
-          <entry key="js" value="7" />
+          <entry key="html" value="12" />
+          <entry key="js" value="9" />
           <entry key="md" value="2" />
           <entry key="png" value="1" />
+          <entry key="ts" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="5" />
-          <entry key="HTML" value="9" />
+          <entry key="HTML" value="12" />
           <entry key="Image" value="1" />
-          <entry key="JavaScript" value="7" />
+          <entry key="JavaScript" value="9" />
           <entry key="PLAIN_TEXT" value="10" />
+          <entry key="TypeScript" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Rportfolioitem" value="222" />
-          <entry key="html" value="3405" />
-          <entry key="js" value="7319" />
+          <entry key="html" value="4695" />
+          <entry key="js" value="12159" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="3405" />
-          <entry key="JavaScript" value="7319" />
+          <entry key="HTML" value="4695" />
+          <entry key="JavaScript" value="12159" />
           <entry key="PLAIN_TEXT" value="222" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.63055336">
+    <splitter split-orientation="horizontal" split-proportion="0.61340606">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/HTML/sites/default/files/PortfolioWidget_JS.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="357">
-                  <caret line="138" column="52" lean-forward="true" selection-start-line="138" selection-start-column="52" selection-end-line="138" selection-end-column="52" />
+                <state relative-caret-position="287">
+                  <caret line="194" lean-forward="true" selection-start-line="194" selection-end-line="194" />
                 </state>
               </provider>
             </entry>
@@ -81,24 +86,23 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/HTML/PortfolioWidget.html">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/HTML/sites/default/files/PortfolioItems.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="476">
-                  <caret line="85" column="12" selection-start-line="85" selection-start-column="12" selection-end-line="85" selection-end-column="12" />
-                  <folding>
-                    <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
+                <state relative-caret-position="1326">
+                  <caret line="78" column="5" lean-forward="true" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/HTML/sites/default/files/PortfolioItems.js">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/HTML/PortfolioWidget.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="422">
-                  <caret line="81" column="18" lean-forward="true" selection-start-line="81" selection-start-column="18" selection-end-line="81" selection-end-column="18" />
+                <state relative-caret-position="45">
+                  <caret line="89" column="22" lean-forward="true" selection-start-line="89" selection-start-column="22" selection-end-line="89" selection-end-column="22" />
+                  <folding>
+                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -120,6 +124,8 @@
     <findStrings>
       <find>;</find>
       <find>red</find>
+      <find>generate</find>
+      <find>generatePage</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -149,15 +155,17 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1075" />
+    <option name="x" value="130" />
+    <option name="y" value="110" />
     <option name="width" value="980" />
-    <option name="height" value="1040" />
+    <option name="height" value="1039" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -204,7 +212,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -261,17 +268,22 @@
       <workItem from="1539657617770" duration="10068000" />
       <workItem from="1539836885908" duration="5716000" />
       <workItem from="1540401051705" duration="5977000" />
+      <workItem from="1540432783277" duration="3712000" />
+      <workItem from="1540497818813" duration="543000" />
+      <workItem from="1540498406135" duration="10911000" />
+      <workItem from="1540664111672" duration="4279000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42929000" />
+    <option name="totallyTimeSpent" value="62374000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15201586" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.15201586" />
+      <window_info active="true" id="Structure" order="1" sideWeight="0.50212765" side_tool="true" visible="true" weight="0.15201586" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -330,19 +342,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="5160" column="20" lean-forward="true" selection-start-line="5160" selection-start-column="20" selection-end-line="5160" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/HTML/sites/default/files/PortfolioItems.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="81" column="18" lean-forward="true" selection-start-line="81" selection-start-column="18" selection-end-line="81" selection-end-column="18" />
+        <state relative-caret-position="1326">
+          <caret line="78" column="5" lean-forward="true" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HTML/PortfolioWidget.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="85" column="12" selection-start-line="85" selection-start-column="12" selection-end-line="85" selection-end-column="12" />
+        <state relative-caret-position="45">
+          <caret line="89" column="22" lean-forward="true" selection-start-line="89" selection-start-column="22" selection-end-line="89" selection-end-column="22" />
           <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
@@ -350,8 +368,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HTML/sites/default/files/PortfolioWidget_JS.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="138" column="52" lean-forward="true" selection-start-line="138" selection-start-column="52" selection-end-line="138" selection-end-column="52" />
+        <state relative-caret-position="287">
+          <caret line="194" lean-forward="true" selection-start-line="194" selection-end-line="194" />
         </state>
       </provider>
     </entry>
