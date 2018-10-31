@@ -29,7 +29,7 @@ const CRUSH2_ARR = [
     "10/16/18",
     "SCIENCE",
     4,//importance
-    "http://rcastro.mit.edu/sites/default/files/CRUSH_3JEER.png", //picture
+    "http://rcastro.mit.edu/sites/default/files/images/BostonSkyline.jpg", //picture
     "https://rcastro.mit.edu",     //url
     "https://rcastro.mit.edu",     //build_blog redirect
     "Biology;Taco",
@@ -46,7 +46,7 @@ const CRUSH3_ARR = [
     "10/16/18",
     "WEBDEV",
     6,//importance
-    "http://rcastro.mit.edu/sites/default/files/CRUSH_3JEER.png", //picture
+    "http://rcastro.mit.edu/sites/default/files/images/Lalaprofiling.png", //picture
     "https://rcastro.mit.edu",     //url
     "https://rcastro.mit.edu",     //build_blog redirect
     "Web;Burrito", //tags
@@ -80,7 +80,7 @@ const CRUSH5_ARR = [
     "10/16/18",
     "MECHE",
     1,//importance
-    "http://rcastro.mit.edu/sites/default/files/CRUSH_3JEER.png", //picture
+    "http://rcastro.mit.edu/sites/default/files/images/SmartCaptionsFrontUp.png", //picture
     "https://rcastro.mit.edu",     //url
     "https://rcastro.mit.edu",     //build_blog redirect
     "Mechanical;Design;Super Cool Concept",

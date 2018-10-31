@@ -6,13 +6,12 @@
 </head>
 <style>
     .mockpage {
-        position: absolute;
+        //position: absolute;
         width: 70%;
         height: 3000px;
-        left: 50%;
-        margin: 100px 0 0 -35%;
+        margin: 30px auto;
         background: #ffffff;
-        alignment: center;
+        padding:50px 3% 0px;
 
     }
     .background{
@@ -33,6 +32,7 @@
 
     <style>
 
+
     /*Used to reset to blank slate*/
     .container_all {
         margin: 0;
@@ -42,25 +42,29 @@
 
     }
 
+
     .HBox_mobile{
         display:inline-block;
-        background: #fffdf4;
-        width:88%;
+        background: white;
+        width:92%;
         height:60vw;
-        margin:0px 6%;
+        margin:0px 4%;
 
     }
 
     .selectionBar{
+
+        text-align: center;
         background: #6593F5;
         display:inline-block;
-        width:78%;
-        height:60px;
-        margin: 0px 8% 30px;
+        width:94%;
+        height:65px;
+        margin: 0px 0% 30px;
         border-radius: 30px ;
         padding:0px 3%;
         overflow: hidden;
     }
+
 
     .selectionButton{
         display:inline-block;
@@ -76,6 +80,21 @@
         cursor: default;
     }
 
+    .selectionList{
+        border-radius:15px;
+        background:white;
+        font-family: "Segoe UI Semibold";
+        border: 2px solid white;
+        font-size: 18px;
+        height: 80%;
+        width: 98%;
+        color: black;
+        opacity: 1.0;
+        cursor: default;
+        margin:2% 0 0 0;
+    }
+
+
     .selectionButton:hover{
         opacity:0.7;
     }
@@ -85,17 +104,17 @@
 
     .HBox_big{
         display:inline-block;
-        width:88%;
+        width:100%;
         height:40vw;
-        margin:0px 6%;
+        margin:0px 0%;
 
     }
 
     .HBox{
         display:inline-block;
-        width:88%;
+        width:100%;
         height:28vw;
-        margin:0px 6%;
+        margin:0px 0%;
     }
 
     .container_big {
@@ -103,7 +122,7 @@
         border-radius: 10px 10px 10px 10px;
 
         width: 96%;
-        height: 85%;
+        height: 96%;
         font-family: "Segoe UI Light";
         font-size: 20px;
         position: relative;
@@ -118,7 +137,7 @@
     //right: 10%;
         display:inline-block;
         width: 46%;
-        height: 85%;
+        height: 96%;
         font-family: "Segoe UI Light";
         font-size: 20px;
         position: relative;
@@ -149,7 +168,7 @@
         color: white;
         border: 1px solid white;
         padding:2px 7px 0px 7px;
-        margin: 0px 2px;
+        margin: 1px 2px;
     }
 
     .trapezoid{
@@ -196,10 +215,12 @@
     /* top left*/
     .title {
         font-family: "Segoe UI Semibold";
-        font-size: 57px;
+        font-size: 50px;
         color: #ffffff;
         position: absolute;
-        top: 0px;
+        top:0px;
+        margin:0;
+        padding:0;
         left: 16px;
 
 
@@ -212,9 +233,13 @@
         top: 15px;
         right: 25px;
     }
+    .blackbar{
+        width:100%;
+        background:black;
+        height:50px;
+    }
 
 </style>
-
     <!--Script to restructure it all-->
 
     <!--<object id="first" data="sites/default/files/PortfolioItems/Test.html"></object>-->
@@ -228,11 +253,13 @@
 
     </script>
 
-    <button onclick= "putItems()">BUTTONIS HEREEEEEE</button>
-    <!--<button onclick= "test2()">TOGGLETHANG</button>-->
-    <p id="DEBUG_1">Hellooo</p>
+    <!--<button onclick= "putItems()">BUTTONIS HEREEEEEE</button>-->
+    <!--&lt;!&ndash;<button onclick= "test2()">TOGGLETHANG</button>&ndash;&gt;-->
+    <p id="DEBUG_1"></p>
+
     <div class="container_all">
-        <div id="test_container" style="background: #fffdf4">TESTING CONT</div>
+
+        <div id="test_container" style="background: #ffffff "></div>
         <!--<div class="container_big">-->
         <!--<img src="sites\default\files\BroombaRidingPic.png" class="portfolio_image_big" width="100%" height="100%">-->
         <!--<div class="trapezoid_big"></div>-->
