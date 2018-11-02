@@ -86,8 +86,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HTML/PortfolioWidget.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="48" column="5" lean-forward="true" selection-start-line="43" selection-end-line="48" selection-end-column="5" />
+            <state relative-caret-position="242">
+              <caret line="40" column="21" lean-forward="true" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -277,12 +277,12 @@
       <workItem from="1540498406135" duration="10911000" />
       <workItem from="1540664111672" duration="15468000" />
       <workItem from="1540833648971" duration="597000" />
-      <workItem from="1540925699515" duration="28676000" />
+      <workItem from="1540925699515" duration="29282000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102836000" />
+    <option name="totallyTimeSpent" value="103442000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -400,8 +400,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HTML/PortfolioWidget.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="48" column="5" lean-forward="true" selection-start-line="43" selection-end-line="48" selection-end-column="5" />
+        <state relative-caret-position="242">
+          <caret line="40" column="21" lean-forward="true" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
