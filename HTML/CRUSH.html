@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--jquery frm google-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <meta charset="UTF-8">
+    <title>Sample Project</title>
+</head>
+<style>
+    .mockpage {
+        width: 70%;
+        height: auto;
+        margin: 30px auto;
+        background: #ffffff;
+        padding:150px 3% 0px;
+
+    }
+    .background{
+        background-image: url("sites/default/files/wallpaper.jpg");
+    // background-color: #384be6;
+    }
+
+</style>
+<body class = "background">
+
+
+<script src="sites/default/files/PortfolioItems.js"></script>
+
+<script src="sites/default/files/PortfolioWidget_JS.js"></script>
+
+<div class="mockpage" style ="background:white">
+
+
+    <style>
+
+        .project_container_all {
+            margin: -6% 0px 0px 0px;
+            padding: 0;
+            background:white;
+            width: 100%;
+            height: auto;
+        }
+
+
+
+        .project_main{
+            position: relative;
+            width:100%;
+            height:auto;
+            text-align: left;
+        }
+
+        #project-title{
+            text-align: left;
+            font-size: 70px;
+            color: #ff8300;
+            font-weight: bold;
+            display:inline-block;
+            font-family: "Trebuchet MS";
+        }
+
+        hr{
+            border: 1px transparent;
+            border-top: 1px solid black;
+        }
+
+        #links{
+            display: inline-block;
+            background: #C5C5C5;
+            width:15%;
+            margin-left:5%;
+            float:right;
+            border-radius: 5px;
+
+        }
+        #links *{
+            color: #01243B;
+            font-family: "Segoe UI Light";
+            display:block;
+            padding: 2px 10px;
+            cursor:pointer;
+        }
+
+        #links *:hover{
+            color:white;
+            cursor: pointer;
+        }
+
+        #links_content *{
+            text-decoration: none;
+        }
+
+        #project_content *{
+            padding:5px;
+        }
+
+        #project_content{
+            border-radius: 5px;
+            background: #eaeaea;
+            display: inline-block;
+            width:80%;
+            margin-left: 0%;
+        }
+
+        .content-section-title{
+            color: #9DA7B2;
+            font-family: "Trebuchet MS";
+            font-size:40px;
+            font-weight: bold
+        }
+
+        .content-section-content{
+            color: black;
+            font-family: "Segoe UI Light";
+            font-size:18px;
+        }
+
+        .content-section{
+        }
+
+
+        li{
+            margin-left:30px;
+        }
+
+        iframe{
+            display:block;
+            margin:auto;
+        }
+        img{
+            display: block;
+            margin:auto;
+            border-radius: 10px;
+        }
+
+        @media only screen and (max-width: 800px) {
+            img{
+                width:100%;
+            }
+
+            #project_content{
+                width:100%;
+            }
+            #links{
+                font-size:20px;
+                width:100%;
+            }
+        }
+
+    </style>
+
+
+
+    <div id="DEBUG_1"></div>
+
+    <div class="project_container_all">
+
+        <div id="project-main" class = "project_main" >
+            <img style ="margin-bottom: -20px;display:inline-block;" width ="100px" src ="https://rcastro.mit.edu/sites/default/files/images/CRUSH_LOGO.jpg">
+            <div  id = "project-title">CRUSH FRC Robotics</div>
+            <hr>
+
+            <div id ="links">
+                <div style ="cursor:default;font-size:25px;color:black;font-weight: bold"> Links</div>
+
+                <a> Github</a>
+                <a> GrabCAD</a>
+                <a> Google Drive</a>
+
+                <hr style ="pointer:default;margin:10px;">
+
+                <div id = "links_content" style="padding:0px">
+                </div>
+
+            </div>
+
+
+
+            <div id = "project_content">
+
+                <div id = "Summary" class = "content-section">
+                    <div class = "content-section-title">Summary</div>
+                    <div class = "content-section-content">
+                        I was <strong>Team captain, Drive Team Captain, and Head Programmer</strong> for FIRST Robotics Competition team
+                        CRUSH 1011. I was on the team from December 2015 until December 2017.
+                        The team was very successful, and contributed a big part to my learning. In 2017, we <strong>won the FRC
+                        Robotics World Championship</strong>, where hundreds of the best teams in the world compete as the 1st pick. Most of my knowledge about
+                        robotics has been self-taught and expressed through programs like these. At CRUSH, I created several control
+                        schemes and routines for the robot to be capable of performing<strong> autonomous feats that no other team in the world
+                        could.</strong> Additionally, I worked on several critical projects in Business, Media, Outreach, Design, and Fabrication.
+                    </div>
+                </div>
+
+                <img width="60%"; src = "https://rcastro.mit.edu/sites/default/files/images/Houston_winners.jpg">
+
+                <div id = "2017-Season" class = "content-section">
+                    <div class = "content-section-title">2017 Season</div>
+                    <div class = "content-section-content">
+                        Accolades
+                        <ul style ="font-size:22px;">
+                            <li>Houston World Champion</li>
+                            <li> Colorado Dean's List Finalist</li>
+                            <li> Colorado Regional Winner</li>
+                            <li> Colorado Regional Chairman's Winner</li>
+                            <li> Chezy Champs Winner</li>
+                        </ul>
+                    </div>
+
+                    <img width ="60%" src ="https://rcastro.mit.edu/sites/default/files/images/CRUSHROBOTONFIELDBEGGINING.jpg" >
+                </div>
+
+                <div id = "2016-Season" class = "content-section">
+                    <div class = "content-section-title">2016 Season</div>
+                    <div class = "content-section-content">
+                        Accolades
+                        <ul style ="font-size:22px;">
+                            <li> St. Louis Championship Division Semi-Finalists</li>
+                            <li> Colorado Regional Winner</li>
+                            <li> Colorado Excellence in Engineering Award</li>
+                        </ul>
+                    </div>
+                    <img width="60%" src="https://rcastro.mit.edu/sites/default/files/images/CRUSH_2016Robot.jpg">
+                </div>
+
+
+
+                <div id = "Programming/Controls" class = "content-section">
+                    <div class = "content-section-title">Programming/Controls</div>
+                    <div class = "content-section-content">
+                        As Head Programmer of the team without a Programming mentor, many projects took time to develop, but in the end
+                        we ended up with consistent autonomous routines that were unique and contributed heavily to our success.
+                        Personally, I worked hundreds of hours on perfecting our code to work as intended.
+                        <br>
+                        We used these concepts:
+                        <ul >
+                            <li>OpenCV based vision tracking</li>
+                            <li>Path generation and following</li>
+                            <li>Arm PID angle control</li>
+                            <li>Collision detection</li>
+                            <li>Independent controlling systems for individual robot components</li>
+                            <li>Modular code meant to be reused year past year</li>
+                        </ul>
+                        These concepts can be best seen with one of our autonomous routines: the 3 gear. Here, the robot
+                        is running completely on its own with only encoders, a gyroscope,a camera, current sensors, and precise coding & debugging
+                        to find itself and score on a 1" wide peg.
+                    </div>
+
+                    <img width = "60%" src ="https://media.giphy.com/media/5LmxfqacwLfRkBM3ia/giphy.gif">
+                </div>
+
+                <div id = "Design" class = "content-section">
+                    <div class = "content-section-title">Design</div>
+                    <div class = "content-section-content">
+                        I worked on critical robot components that had to withstand other 140lb robots crashing into them full speed.
+                        <br>
+                        Here are two of the projects I worked on:
+                        <br><br>
+                        <strong>2017 Collector</strong>
+
+                        <br>
+                        This is a double jointed, clamping mechanism to pick up 11" plastic gears. You can see it in action
+                        in the previous gif above. The bottom plate is 0.065" lexan, which scrapes against the ground at about a 5° angle, which
+                        is just right to allow the gear to slide in as you drive into it. After it's inside of the collector, the clamping cylinder actuates,
+                        pressing a bar with foam on top of the gear onto the bottom plate, holding it tight. Then,
+                        the wrist, which is actuated by a pneumatic cylinder, snaps back up to a "scoring" position which brings
+                        the collector away from the ground. Additionally, the arm can rotate a full 90° to allow the whole mechanism to be tucked
+                        into the robot into a "carrying" position which prevents collector damage from robot and field hits
+                        and allows the whole robot to fit into the alloted size.
+                        <img width ="60%" src = "https://rcastro.mit.edu/sites/default/files/images/NewCollector.png">
+                        <br><br>
+                        <strong>2016 Grappling Hook</strong>
+                        <br>
+                        This was a really fun one. For the 2016 season, there was an optional challenge, where a robot could reach onto a
+                        1" bar over 6 feet above the ground, and then had to pull itself up a few feet into the air.
+                        <img width ="60%" src = "https://rcastro.mit.edu/sites/default/files/images/Hanging%20Robots.jpg">
+                        Our team decided not to focus on that challenge, as it was a relatively low amount of points. We
+                        instead focused more on the more pressing challenges that could make more of a difference. Our ability
+                        to analyze how to divert our team's energy is what allowed us to be really successful compared
+                        to other teams with similar resources.
+                        <br>
+                        Towards the end of the season, however, our main parts were solidified, and we had some time to spare,
+                        so we decided to tackle the challenge, and I spearheaded the design. Since we had <5 lbs to work with,
+                        most designs were out of the question, and we had to come up with something creative. We had
+                        seen a few other teams succeed with a grappling hook type mechanism that launched a hook onto the bar and
+                        then winched the robot up. A local team had a design that was very attractive, so we looked at it
+                        to try to approximate it, however, there were some significant differences between our robots which made
+                        our version need to have much more functionality. Instead, we revamped most of the parts and it led to this:
+
+                        <img width = "60%" src="https://rcastro.mit.edu/sites/default/files/images/GraplingHook.png">
+                        Since our robot was built into a "short" configuration, our launcher had to actuate up from a horizontal position
+                        onto an angle which would hit the bar. Afterwards, the launcher had to release control of the hook, allowing the
+                        surgical tubing launch the hook. Once the hook latched onto the bar, a winch would real in kevlar rope
+                        attached to the hook. Easy right? Well... we only had weight for 1 more motor. So all three of these actions
+                        had to be manipulated by just that one motor. To allow the launcher to actuate upwards to a vertical shooting position,
+                        we created a ripping mechanism, where once the motor reaches a certain length, it would snap a replaceable
+                        cord which allowed the launcher to be pulled back by a spring. Afterwards, a similar snapping mechanism would
+                        release a grabber that held onto the hook, allowing the hook to shoot up. Then the excess kevlar rope was reeled in
+                        to bring the robot up. All with one motor.
+                        <br><br>
+
+                        We did not end up using it in a match in competition due to time constraints, however, it successfully worked
+                        in our shop. It was simply an amazing, fun project to work with that had tight design constraints.
+                    </div>
+                </div>
+
+                <div id = "Media" class = "content-section">
+                    <div class = "content-section-title">Media</div>
+                    <div class = "content-section-content">
+                        Media is a side-passion of mine. I really enjoyed watching other teams' videos, and I really wanted
+                        my team to have some as well, so I taught myself how to use a video editor, and I created our videos.
+                        <br><br>
+                        I made 4 main videos which have gathered over ten thousand views:
+                        <br>
+                        <strong>2017 Season Recap Video</strong>
+                        <br>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/d8vDB--40l0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <br><br>
+                        <strong>2017 FOC Alliance Introductions</strong>
+                        <br>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/cXJNxbYs-vU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <br><br>
+                        <strong>2017 Chezy Teaser</strong>
+                        <br>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/iMZEPH0Sjs4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <br><br>
+                        <strong>2016 Season Recap Video</strong>
+                        <br>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/lM1xCf7ARaE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   <br><br>
+
+                    </div>
+                </div>
+
+                <div id = "Business" class = "content-section">
+                    <div class = "content-section-title">Business</div>
+                    <div class = "content-section-content">
+                        FRC teams are expensive, you have travel costs, robot costs, shop costs, and more. Our budget ran around $50,000 yearly,
+                        and somehow we had to find funding for most of it in order to make the cost to the students the least.
+                        <br>
+                        I worked on a sponsorship package document, which outlined companies' incentive to sponsor us.
+                        Additionally, I went on a few presentations to sponsors, and media outlets, which contributed
+                        to tens of thousands of dollars of fundraising to our team.
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <!--script to add links to content-->
+    <script>
+        function updateLinks(){
+            const children_ids = [].map.call(document.getElementById("project_content").getElementsByClassName("content-section"), function(node){
+                return node.id;});
+            children_ids.forEach(function(id){
+                let idLink = document.createElement('a');
+                idLink.href = "#"+id;
+                idLink.innerText=id.replace("-"," ");
+               document.getElementById("links_content").appendChild(idLink);
+            });
+        }
+
+        updateLinks();
+    </script>
+
+
+
+
+</div>
+
+
+
+</body>
+</html>
