@@ -270,10 +270,10 @@ function getColorFromType(type) {
             return "#1aa327"
             break;
         case "WEBDEV":
-        case "Potato":
+        case "Web":
             return "#ae9846"
             break;
-        case "Making":
+        case "Outreach":
             return "#ff0c03";
             break;
         case "Engineering":
