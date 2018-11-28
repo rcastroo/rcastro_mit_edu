@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--jquery frm google-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <meta charset="UTF-8">
+    <title>Sample Project</title>
+</head>
+<style>
+    .mockpage {
+        width: 70%;
+        height: 3000px;
+        margin: 30px auto;
+        background: #ffffff;
+        padding:150px 3% 0px;
+
+    }
+    .background{
+        background-image: url("sites/default/files/wallpaper.jpg");
+    // background-color: #384be6;
+    }
+
+</style>
+<body class = "background">
+
+
+<script src="sites/default/files/PortfolioItems.js"></script>
+
+<script src="sites/default/files/PortfolioWidget_JS.js"></script>
+
+<div class="mockpage" style ="background:white">
+
+    <link rel="stylesheet" href="https://rcastro.mit.edu/sites/default/files/documents/RProject.css">
+
+
+
+    <div id="DEBUG_1"></div>
+
+    <div class="project_container_all">
+
+        <div id="project-main" class = "project_main" >
+            <div id = "project-title">Slot</div>
+            <hr>
+
+            <div id ="links">
+                <div style ="cursor:default;font-size:25px;color:black;font-weight: bold"> Links</div>
+
+                <a href="https://workbench.grabcad.com/workbench/projects/gc3r_mumxpbs40PSBDyN08fpCLylm9sYck7r_ekFH0-kHn#/space/gcnbusKy9mZlGM5jjGFUJZLXmdnh4vGG7MCAc1DKiHURPt"> GrabCAD</a>
+
+                <hr style ="pointer:default;margin:10px;">
+
+                <div id = "links_content" style="padding:0px">
+                </div>
+
+            </div>
+
+
+
+            <div id = "project_content">
+
+                <div id = "Summary" class = "content-section">
+                    <div class = "content-section-title">Summary</div>
+                    <div class = "content-section-content">
+                        I needed a way to carry my umbrella. See, my backpack only has 1 pocket, and it is already occupied
+                        by my water bottle, which is attached by a string to my backpack because I kept losing it.
+                        So on the opposite side of the water bottle, I designed, printed, and attached this 3D printed "slot" which can hold an
+                        umbrella easily! Additionally, I have a carabiner that I can attach to one of the holes to attach
+                        other things.
+                        <br><br>
+                        The slot is attached to the backpack via 2 bolts with washers on the other ends and lock nuts in
+                        order to prevent fraying. It is ridiculously useful!
+                    </div>
+                </div>
+
+                <img width="60%"; src = "https://rcastro.mit.edu/sites/default/files/images/slotrender.JPG">
+                <img width="60%"; src = "https://rcastro.mit.edu/sites/default/files/images/RightSideZoomed.jpg">
+                <img width="60%"; src = "https://rcastro.mit.edu/sites/default/files/images/LeftSideWaterBottle.jpg">
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <!--script to add links to content-->
+    <script>
+        function updateLinks(){
+            const children_ids = [].map.call(document.getElementById("project_content").getElementsByClassName("content-section"), function(node){
+                return node.id;});
+            children_ids.forEach(function(id){
+                let idLink = document.createElement('a');
+                idLink.href = "#"+id;
+                idLink.innerText=id.replace("-"," ");
+               document.getElementById("links_content").appendChild(idLink);
+            });
+        }
+
+        updateLinks();
+    </script>
+
+
+
+
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--jquery frm google-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <meta charset="UTF-8">
+    <title>Sample Project</title>
+</head>
+<style>
+    .mockpage {
+        width: 70%;
+        height: 3000px;
+        margin: 30px auto;
+        background: #ffffff;
+        padding:150px 3% 0px;
+
+    }
+    .background{
+        background-image: url("sites/default/files/wallpaper.jpg");
+    // background-color: #384be6;
+    }
+
+</style>
+<body class = "background">
+
+
+<script src="sites/default/files/PortfolioItems.js"></script>
+
+<script src="sites/default/files/PortfolioWidget_JS.js"></script>
+
+<div class="mockpage" style ="background:white">
+
+    <link rel="stylesheet" href="https://rcastro.mit.edu/sites/default/files/documents/RProject.css">
+
+
+
+
+    <div id="DEBUG_1"></div>
+
+    <div class="project_container_all">
+
+        <div id="project-main" class = "project_main" >
+            <div id = "project-title">Lalaprofiling</div>
+            <hr>
+
+            <div id ="links">
+                <div style ="cursor:default;font-size:25px;color:black;font-weight: bold"> Links</div>
+
+                <a href="https://rcastro.mit.edu/sites/default/files/documents/LalaproflingDocumentation.pdf"> Documentation</a>
+
+                <hr style ="pointer:default;margin:10px;">
+
+                <div id = "links_content" style="padding:0px">
+                </div>
+
+            </div>
+
+
+
+            <div id = "project_content">
+                <div id = "Summary" class = "content-section">
+                    <div class = "content-section-title">Summary</div>
+                    <div class = "content-section-content">
+                        Lalaprofiling is a graphical application that facilitates the creation of paths and
+                        motion profiles for robot autonomous routines, along with separate classes on the controller
+                        side to follow the desired profiles.<br>
+                        The problem with current solutions is that they are too hard to implement. A regular team with limited
+                        knowledge and resources cannot successfully implement complex autonomous routines.So
+                        I developed Lalaprofiling on my free time as a tool for my FRC team, along with other ones I could work with to implement.
+                        In 2017, I implemented it with my team, CRUSH 1011, and then in 2018, I used it with a team I helped
+                        mentor, team 238 The Crusaders.
+                        <br><br>
+                        You can find further documentation here:
+                        <a href ="https://rcastro.mit.edu/sites/default/files/documents/LalaproflingDocumentation.pdf">Documentation</a>
+                    </div>
+                </div>
+
+                <iframe width="560" style = "margin:auto;display:block;" height="315" src="https://www.youtube.com/embed/v_kPFNrJRQo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <div id = "Goals" class = "content-section">
+                    <div class = "content-section-title">Goals</div>
+                    <div class = "content-section-content">
+                        The design goals coming for Lalaprofiling were set as follows:
+                        <ul>
+                            <li> Main design goal: Has to be easy enough to implement and use that anyone with minor
+                            coding experience can implement in their team with limited help.</li>
+                            <li> Must be able to generate S-curve profiles</li>
+                            <li> Must be capable of moving a robot on a 90 in circular diameter path 90 degrees with less than an inch of error
+                            in both the x and y directions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id = "Current-State" class = "content-section">
+                    <div class = "content-section-title">Current State</div>
+                    <div class = "content-section-content">
+                       After testing the program with a different team, team 238, I found that it was more difficult to
+                        implement and tune than I imagined. More work needs to be done in order to make it more accessible
+                        for others. In the coming years, I will be working on making this a reality for public teams.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--script to add links to content-->
+    <script>
+        function updateLinks(){
+            const children_ids = [].map.call(document.getElementById("project_content").getElementsByClassName("content-section"), function(node){
+                return node.id;});
+            children_ids.forEach(function(id){
+                let idLink = document.createElement('a');
+                idLink.href = "#"+id;
+                idLink.innerText=id.replace("-"," ");
+               document.getElementById("links_content").appendChild(idLink);
+            });
+        }
+
+        updateLinks();
+    </script>
+
+
+
+
+</div>
+
+
+
+</body>
+</html>

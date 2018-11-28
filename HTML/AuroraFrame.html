@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--jquery frm google-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <meta charset="UTF-8">
+    <title>Sample Project</title>
+</head>
+<style>
+    .mockpage {
+        width: 70%;
+        height: 3000px;
+        margin: 30px auto;
+        background: #ffffff;
+        padding:150px 3% 0px;
+
+    }
+    .background{
+        background-image: url("sites/default/files/wallpaper.jpg");
+    // background-color: #384be6;
+    }
+
+</style>
+<body class = "background">
+
+
+<script src="sites/default/files/PortfolioItems.js"></script>
+
+<script src="sites/default/files/PortfolioWidget_JS.js"></script>
+
+<div class="mockpage" style ="background:white">
+
+    <link rel="stylesheet" href="https://rcastro.mit.edu/sites/default/files/documents/RProject.css">
+
+
+
+    <div id="DEBUG_1"></div>
+
+    <div class="project_container_all">
+
+        <div id="project-main" class = "project_main" >
+            <div id = "project-title">Aurora Frame</div>
+            <hr>
+
+            <div id ="links">
+                <div style ="cursor:default;font-size:25px;color:black;font-weight: bold"> Links</div>
+
+                <!--<a> GrabCAD</a>-->
+
+                <hr style ="pointer:default;margin:10px;">
+
+                <div id = "links_content" style="padding:0px">
+                </div>
+
+            </div>
+
+
+
+            <div id = "project_content">
+
+                <div id = "Summary" class = "content-section">
+                    <div class = "content-section-title">Summary</div>
+                    <div class = "content-section-content">
+                        This is a frame for an image rastered on acrylic. There is blue red and green LEDs hidden inside
+                        of an 1x1 aluminum tube which serves as a base for the acrylic which when turned on, shine light
+                        on the rastered acrylic, which gives the image look like an "aurora". It is a really cool
+                        frame that I plan on making much bigger and better over the next coming months. For now, I made
+                        two of the medium sized versions to give to two people I worked with at the MIT Edgerton Center.
+                    </div>
+                </div>
+
+                <img width="60%"; src = "https://rcastro.mit.edu/sites/default/files/images/AuroraFrameWAcrylic.jpeg">
+
+                <div id = "Insides" class = "content-section">
+                    <div class = "content-section-title">Insides</div>
+                    <div class = "content-section-content">
+                        In the inside of the aurora frame, there is 3 pieces of 1/8 wood, the middle piece being shorter
+                        than the others and all of them being the full length of the 1x1 aluminum. On that middle piece,
+                        The LEDs rest, and the acrylic rests on top of the LEDs. There is a switch on the back along with
+                        a battery pack. Hiding inside as well is the rest of the circuit: just a bunch of resistors and wiring.
+                    </div>
+                </div>
+
+                <img width="60%"; src = "https://rcastro.mit.edu/sites/default/files/images/BeforeAssembly.jpeg">
+
+
+                <div id = "Next" class = "content-section">
+                    <div class = "content-section-title">Next</div>
+                    <div class = "content-section-content">
+                        I plan on making a bigger version of this that can be wall mounted and be plugged into a wall outlet.
+                        In this way, you can put much bigger acrylic images on the frame and hang it up, which would
+                        look fantastic!
+                    </div>
+                </div>
+
+                <img width="60%"; src = "https://rcastro.mit.edu/sites/default/files/images/AuroraFrameSansImage.jpeg">
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <!--script to add links to content-->
+    <script>
+        function updateLinks(){
+            const children_ids = [].map.call(document.getElementById("project_content").getElementsByClassName("content-section"), function(node){
+                return node.id;});
+            children_ids.forEach(function(id){
+                let idLink = document.createElement('a');
+                idLink.href = "#"+id;
+                idLink.innerText=id.replace("-"," ");
+               document.getElementById("links_content").appendChild(idLink);
+            });
+        }
+
+        updateLinks();
+    </script>
+
+
+
+
+</div>
+
+
+
+</body>
+</html>

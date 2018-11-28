@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--jquery frm google-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <meta charset="UTF-8">
+    <title>Sample Project</title>
+</head>
+<style>
+    .mockpage {
+        width: 70%;
+        height: 3000px;
+        margin: 30px auto;
+        background: #ffffff;
+        padding:150px 3% 0px;
+
+    }
+    .background{
+        background-image: url("sites/default/files/wallpaper.jpg");
+    // background-color: #384be6;
+    }
+
+</style>
+<body class = "background">
+
+
+<script src="sites/default/files/PortfolioItems.js"></script>
+
+<script src="sites/default/files/PortfolioWidget_JS.js"></script>
+
+<div class="mockpage" style ="background:white">
+
+    <link rel="stylesheet" href="https://rcastro.mit.edu/sites/default/files/documents/RProject.css">
+    <div id="DEBUG_1"></div>
+
+    <div class="project_container_all">
+
+        <div id="project-main" class = "project_main" >
+            <div id = "project-title">Smart Captions</div>
+            <hr>
+
+            <div id ="links">
+                <div style ="cursor:default;font-size:25px;color:black;font-weight: bold"> Links</div>
+
+                <a> Github</a>
+                <hr style ="pointer:default;margin:10px;">
+
+                <div id = "links_content" style="padding:0px">
+                </div>
+
+            </div>
+
+
+
+            <div id = "project_content">
+
+                <div id = "Inspiration" class = "content-section">
+                    <div class = "content-section-title">Inspiration</div>
+                    <div class = "content-section-content">
+                        We sought to create a better way to get fast and easy access to information about the topics of
+                        discussion in an audio or video file. This would allow people to quickly read articles about
+                        topics mentioned in debate or the news so that they can develop a better understanding of these
+                        issues rather than just take someone's word for it.
+                    </div>
+                </div>
+
+                <img width="80%"; src = "https://rcastro.mit.edu/sites/default/files/images/SmartCaptionsFront.png">
+
+                <div id = "What-It-Does" class = "content-section">
+                    <div class = "content-section-title">What it does</div>
+                    <div class = "content-section-content">
+                        First, our web-app takes an uploaded audio file and converts the speech to text using the Rev.com API.
+                        Then natural language processing is applied to pull out the important ideas and topics
+                        covered in the conversation. These keywords can then quickly be clicked to pull articles about them.
+                    </div>
+                </div>
+
+                <div id = "How-We-Built-It" class = "content-section">
+                    <div class = "content-section-title">How we built it</div>
+                    <div class = "content-section-content">
+                        We developed both client- and server-side software to process audio files and pull out the main conversation
+                        points. The client-side was developed primarily with HTML, CSS, and Javascript. The server side was developed
+                        using Python. The server is responsible for API calls to the Speech-to-Text service and the NLP. Communication
+                        between the server and client is done through the use of Flask on Python. Flask allows the client to make REST
+                        API calls that we developed to the server to initialize STT and NLP processing. This same REST API is used to
+                        retrieve the data on the client-side and post the results to the client-side.
+                        Our web-app takes advantage of Rev.com's Speech-To-Text processing and Google Cloud's Natural Language Processing to effectively process data. Flask is used to create a Python microserver that is accessed by the client using REST API calls.
+
+                    </div>
+                </div>
+
+                <div id = "Challenges-We-Ran-Into" class = "content-section">
+                    <div class = "content-section-title">Challenges we ran into</div>
+                    <div class = "content-section-content">
+                        At first, we found it difficult to approach the start of implementation. We tackled this problem
+                        by speaking with the available developers that worked at the companies who hosted the APIs we
+                        were using. By talking with the experts, we were able to make a clear diagram of what we wanted
+                        and a path as to how we were going to implement that.
+                    </div>
+                </div>
+
+                <div id = "Accomplishments" class = "content-section">
+                    <div class = "content-section-title">Accomplishments</div>
+                    <div class = "content-section-content">
+                        Our team is proud of how effectively we were able to go through the ideation process and to our
+                        idea into a well-implemented web-app. Each one of our teammates learned about a new area of
+                        programming and development that they had never explored before.
+                        In terms of developing the back-end, we are very proud of the Python microserver that we were
+                        able to develop. Nobody on our team had any experience developing a back-end coming into the
+                        hackathon, but we made a very strong and effective back-end server that made 3rd-party API calls
+                        and also was capable of handling REST API calls from the client to initialize these 3rd-party calls
+                        and transfer information gathered by them.
+
+                    </div>
+                </div>
+
+                <div id = "What-We-Learned" class = "content-section">
+                    <div class = "content-section-title">What we learned</div>
+                    <div class = "content-section-content">
+                        This was the first hackathon for everyone on our team. We all learned how to contribute to a
+                        group development project. We were able to effectively divide work loads while still allowing
+                        for seamless integration between different people's code. We also learned in depth about how APIs
+                        and servers work, giving us insight into back-end development that we never had. Overall,
+                        we enjoyed learning how to take something from concept stage to basic implementation.
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <!--script to add links to content-->
+    <script>
+        function updateLinks(){
+            const children_ids = [].map.call(document.getElementById("project_content").getElementsByClassName("content-section"), function(node){
+                return node.id;});
+            children_ids.forEach(function(id){
+                let idLink = document.createElement('a');
+                idLink.href = "#"+id;
+                idLink.innerText=id.replace("-"," ");
+               document.getElementById("links_content").appendChild(idLink);
+            });
+        }
+
+        updateLinks();
+    </script>
+
+
+
+
+</div>
+
+
+
+</body>
+</html>

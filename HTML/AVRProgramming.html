@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--jquery frm google-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <meta charset="UTF-8">
+    <title>Sample Project</title>
+</head>
+<style>
+    .mockpage {
+        width: 70%;
+        height: 5000px;
+        margin: 30px auto;
+        background: #ffffff;
+        padding:150px 3% 0px;
+
+    }
+    .background{
+        background-image: url("sites/default/files/wallpaper.jpg");
+    // background-color: #384be6;
+    }
+
+</style>
+<body class = "background">
+
+
+<script src="sites/default/files/PortfolioItems.js"></script>
+
+<script src="sites/default/files/PortfolioWidget_JS.js"></script>
+
+<div class="mockpage" style ="background:white">
+
+    <link rel="stylesheet" href="https://rcastro.mit.edu/sites/default/files/documents/RProject.css">
+
+
+
+    <div id="DEBUG_1"></div>
+
+    <div class="project_container_all">
+
+        <div id="project-main" class = "project_main" >
+            <div id = "project-title">Programming for AVR</div>
+            <hr>
+
+            <div id ="links">
+                <div style ="cursor:default;font-size:25px;color:black;font-weight: bold"> Links</div>
+
+                <a href="https://gitlab.cba.mit.edu/rcastro/atkitbreadboardtesting"> Github</a>
+
+                <hr style ="pointer:default;margin:10px;">
+
+                <div id = "links_content" style="padding:0px">
+                </div>
+
+            </div>
+
+
+
+            <div id = "project_content">
+
+                <div id = "Summary" class = "content-section">
+                    <div class = "content-section-title">Summary</div>
+                    <div class = "content-section-content">
+                        This project was done in order to experiment with the <a href="https://gitlab.cba.mit.edu/jakeread/atkbreadboardboard">
+                        Automotakit  breadboard board </a> which is based on the ATMEGA256A3U chip. The use of a DAC, ADC
+                        , low pass filter, PWM, basic I/O, current control, clock setup, and interrupts on an Atmega chip are
+                        some of the topics explored here.
+                        <br><br>
+                        In order to experiment around, the datasheet and manual were used extensively along with a scope
+                        to mess around with values. Many lessons were learned through this project most heavily including the
+                        use of registers.
+                    </div>
+                </div>
+
+                <img width="60%"; src = "https://rcastro.mit.edu/sites/default/files/images/InitialTestswithPIDonVoltageControl.gif">
+
+                <div id = "PIDTest" class = "content-section">
+                    <div class = "content-section-title">PID Test</div>
+                    <div class = "content-section-content">
+                        To incorporate all of the individual components, I wrote a project in which all the components are included
+                        to make a PID controller which drives a 3D-printed "clock".
+                    </div>
+                </div>
+
+                <img width="60%"; src = "https://rcastro.mit.edu/sites/default/files/images/StandTesterSolidworks.png">
+
+
+                <div id = "Lessons" class = "content-section">
+                    <div class = "content-section-title">Lessons</div>
+                    <div class = "content-section-content">
+                        <ul>
+                            <li><strong>DAC</strong></li>
+                            DAC()<< example in this code is meant only to use DACB due to poor construction<br>
+
+                            Used to convert digital signals to analog signals - really useful for debugging on scopes<br>
+                            <br><br>
+                            DAC
+                            CTRLA - enable a channel on the DAC, and enable DAC<br>
+                            CTRLB - set DAC to single channel use or dual channel use<br>
+                            CTRLC - Set the reference voltage<br>
+                            <br>
+                            DAC Channel<br>
+                            DACB.STATUS - used to check if its ready to convert again.<br>
+                            DACx.CHyDATA - 12 bit value to output<br>
+
+                            <br><br>
+                            <li><strong>ADC</strong></li>
+
+                            ADC(ADC, ADC_CH, ADC_CH_MUXPOS);<br>
+                            Pass in the ADC you want to use. channel, and the Pin you want to sue for POS side(NEG is gnd here)
+                            Used to convert Analog signals to digital signals for processing. (i.e. - current sensing)
+                            ADC can be setup in multiple ways- first divide being between single or differential mode
+                            In the example, it is setup in differential mode W gain.
+
+                            CTRLA enable ADC<br>
+                            CTRLB ADC Resolution<br>
+                            REFCTRL Ref voltage<br>
+                            PRESCALER ADC clock prescaler - ADC runs on its own clock- you want to make sure to run it down, otherwise you run into many problems.<br>
+                            <br>
+                            ADC Channel<br>
+                            <br>
+                            CTRL- channel input mode(DIFFWGAIN in this case) and the gain value, and to start a scan(1<<7)
+                            remember to check if scan is done being computed before doing again. Value 1<<7 is turned off
+                            when scan is done
+                            <br>
+                            MUXCTRL - setting the positive and negative pins.
+
+
+                            <br><br>
+                            <li><strong>Timer & PWM</strong></li>
+                            PWM(Timer, Prescalar, pwm channel, base frequency, desired frequency)<br>
+                            For PWM, you have to setup multiple things. You are using the Timer on the chip,
+                            so you have to setup its period(compare capture value with MAX 65536), its prescalar,
+                            its mode, along with the channel at which to output when the timer hits the compare value.
+                            Necessary Registers to run minimal PWM
+                            <br>
+                            Timer<br>
+                            <br>
+                            CTRLA - prescalar - use the minimum amount in order to preserve as much
+                            resolution as possible<br>
+                            CTRLB - Timer mode (Singleslope for PWM-> TC_WGMODE_SINGLESLOPE_gc)
+                            and the pwm channel on which to output given as TCX_CCXEN_bm type<br>
+                            PERBUFL & PERBUFH - Hi and lo period values for timer. Timer counts up to
+                            this value and then restarts back to 0.<br>
+                            <br>
+                            Timer Channel<br>
+                            <br>
+                            CCXBUFH & CCXBUFL - compare value. When the Timer hits this value on its
+                            count up, it will change the output to low.<br>
+                            Timer Interrupts<br>
+                            Also uses Timer (should be obvious given by name ;) )<br>
+                            To set up, make sure that interrupts are enabled by including avr/interrupt.h,
+                            and calling sei(); and setting the PMIC CTRL pins to each level wanted
+                            (high, medium, and/or low level interrupts)<br>
+                            Remember to set the pin you want as an output using PORTX.DIRSET register<br>
+                            <br>
+                            Timer<br>
+                            <br>
+                            CTRLA - setup prescalar<br>
+                            PERBUFL & PERBUFH - setup period same as PWM above<br>
+                            INTCTRLA - initiate the interrupt<br>
+                            <br>
+                            then, add a method without return type(not even void) named ISR(TCCX_OVF_vect),
+                            where X is your timer number with the contents that you want to loop over.
+
+
+
+                            <br><br>
+                            <li><strong>PID</strong></li>
+                            PID(P,I,D, dt, CONT, MIN & MAX IN & OUT, K)<br><br>
+                            Typical PID sequence, with some added features. enable CONT in order to have a loop
+                            for a system that is circular (i.e. a 360 degree arm yes vs a 1d elevator no)
+                            Setup mininum and maximum outputs, with integral portion not allowed to go over
+                            the MAX& MIN Outs. Since the derivative portion can be quite noisy run at a very
+                            fast frequency, a low pass filter is automatically applied to the D value,
+                            with K being a constant used to change the low pass filter's response time. See
+                            low pass filter for details on that. dt is the period of each loop.(1second /frequency)
+                            <br><br>
+                            crunch(input) logic
+                            current error = setpoint - current value<<<<<< this is changed if it is CONT. If CONT, find
+                            the shortest distance to setpoint is the current error.<br>
+                            total error+= current error;<br>
+                            derivate error = filter(current error - previous error)<br>
+                            output = P* current error + I* total Error + D* derivative error<br>
+
+                            onTarget() logic<br>
+                            if on target according to acceptable range for more than a
+                            certain amount of time, return true<br>
+                            <br>
+                            setAcceptableRange() logic<br>
+                            set the acceptable range +- where range is sepoint+-acceptable range<br>
+                            <br>
+                            setSetpoint()<br>
+                            Current Control(P, I, dt, MAX&MIN IN&OUT)<br>
+                            Basic PI loop. I is used much more than normal, P being used for the initial ramp up.
+                            Same setup as PID loop, but without the derivative term<br>
+                            crunch(input) logic<br>
+                            current error = setpoint - current value<br>
+                            the shortest distance to setpoint is the current error.<br>
+                            total error+= current error;<br>
+                            output = P* current error + I* total Error<br>
+                            <br>
+                            onTarget() logic<br>
+                            if on target according to acceptable range for more than a
+                            certain amount of time, return true<br>
+                            <br>
+                            setAcceptableRange() logic<br>
+                            set the acceptable range +- where range is sepoint+-acceptable range<br>
+                            <br>
+                            setSetpoint()<br>
+                            Encoder w/ interrupts/ATKEncoder<br>
+                            Encoders that automatically update based on interrupts running on a certain port.<br>
+                            PORTX_DIRSET &= ~(PINx_bm | PINy_bm) - set the direction of the two input pins<br>
+                            PORTX.INTCTRL - set the level of the interrupt(high/med/low)<br>
+                            PORTX.INTzMASK= set the interrupt of the port towards a certain pin<br>
+                            PORTX.PINxCTRL = set Pin to trigger on rising or falling edge<br>
+                            (make sure one interrupt is set on falling and other on rising edge)<br>
+<br>
+                            ISR(PORTX_INTz_vect) logic ( 1 for each pin used)<br>
+                            if pins are different values, add to counter value, if pins are the same, subtract<br>
+                            This is due to the nature of encoders and how they count. If running clockwise,<br>
+                            the values line up, and if counter clockwise they dont line up(the values are 90 degrees away
+                            from each other)<br>
+                            Basic Pin I/O<br>
+                            PORTX_DIRSET - set the direction of each port- 0 for input 1 for output<br>
+                            PORTX_DIRTGL - toggle direction<br>
+                            PORTX_DIRSET/CLR - set or clear direction of each port<br>
+                            PORTX_OUTSET/TGL/CLR- set/toggle/clear output to high or low<br>
+
+
+                            <br><br>
+                            <li><strong>Clock</strong></li><br>
+                            Used to set clock to 48 Mhz<br>
+                            OSC.XOSCCTRL = OSC_XOSCSEL_XTAL_256CLK_gc | OSC_FRQRANGE_12TO16_gc; // select external source<br>
+                            OSC.CTRL = OSC_XOSCEN_bm; // enable external source<br>
+                            while(!(OSC.STATUS & OSC_XOSCRDY_bm)); // wait for external<br>
+                            OSC.PLLCTRL = OSC_PLLSRC_XOSC_gc | OSC_PLLFAC0_bm | OSC_PLLFAC1_bm; // select external osc for pll, do pll = source * 3<br>
+                            //OSC.PLLCTRL = OSC_PLLSRC_XOSC_gc | OSC_PLLFAC1_bm; // pll = source * 2 for 32MHz std clock<br>
+                            OSC.CTRL |= OSC_PLLEN_bm; // enable PLL<br>
+                            while (!(OSC.STATUS & OSC_PLLRDY_bm)); // wait for PLL to be ready<br>
+                            CCP = CCP_IOREG_gc; // enable protected register change<br>
+                            CLK.CTRL = CLK_SCLKSEL_PLL_gc; // switch to PLL for main clock<br>
+
+
+
+                            <br><br>
+                            <li><strong>Low pass Filter</strong></li><br>
+                            Used to clean a noisy signal. meant to be run at a fast frequency, since (1-2^-k)takes many
+                            clock counts to settle.<br>
+                            Algorithm- output = y(n) = (1-2^-k)(y(n-1)) + (2^-k)(x(n)) << y(n) output, x(n)new input, n current clock count
+                            filter(input)
+                            give in new input, and returns in output
+                            Currently two examples of working code using Atmel Studio
+                            for the Automota Kit Breadboard board
+
+                            <br><br><br>
+                            DACExample<br>
+                            Outputs a sine wave out of the PB2 port using DACB<br>
+                            PWMControl<br>
+                            Outputs a pwm signal ranging from 0-100% duty cycle at 20khz<br>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <!--script to add links to content-->
+    <script>
+        function updateLinks(){
+            const children_ids = [].map.call(document.getElementById("project_content").getElementsByClassName("content-section"), function(node){
+                return node.id;});
+            children_ids.forEach(function(id){
+                let idLink = document.createElement('a');
+                idLink.href = "#"+id;
+                idLink.innerText=id.replace("-"," ");
+               document.getElementById("links_content").appendChild(idLink);
+            });
+        }
+
+        updateLinks();
+    </script>
+
+
+
+
+</div>
+
+
+
+</body>
+</html>

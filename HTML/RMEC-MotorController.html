@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--jquery frm google-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <meta charset="UTF-8">
+    <title>Sample Project</title>
+</head>
+<style>
+    .mockpage {
+        width: 70%;
+        height: 3000px;
+        margin: 30px auto;
+        background: #ffffff;
+        padding:150px 3% 0px;
+
+    }
+    .background{
+        background-image: url("sites/default/files/wallpaper.jpg");
+    // background-color: #384be6;
+    }
+
+</style>
+<body class = "background">
+
+
+<script src="sites/default/files/PortfolioItems.js"></script>
+
+<script src="sites/default/files/PortfolioWidget_JS.js"></script>
+
+<div class="mockpage" style ="background:white">
+
+    <link rel="stylesheet" href="https://rcastro.mit.edu/sites/default/files/documents/RProject.css">
+
+
+
+    <div id="DEBUG_1"></div>
+
+    <div class="project_container_all">
+
+        <div id="project-main" class = "project_main" >
+            <div id = "project-title">RMEC Motor Controller</div>
+            <hr>
+
+            <div id ="links">
+                <div style ="cursor:default;font-size:25px;color:black;font-weight: bold"> Links</div>
+
+                <a> Github</a>
+
+                <hr style ="pointer:default;margin:10px;">
+
+                <div id = "links_content" style="padding:0px">
+                </div>
+
+            </div>
+
+
+
+            <div id = "project_content">
+
+                <div id = "Overview" class = "content-section">
+                    <div class = "content-section-title">Project Overview</div>
+                    <div class = "content-section-content">
+                        AutomataKit is a collection of open hardware and software being developed at the Center for Bits and
+                        Atoms (dir. Neil Gershenfeld) that provides rapidly reconfigurable sets of building blocks for the
+                        assembly of robotic systems and digital fabrication machinery. ATK is part of the CBA’s ongoing effort to
+                        share digital fabrication equipment and STEM education across the globe, and will be part of the
+                        ecosystem of tools used in a network of more than 1000 Fab Labs.
+                        A more detailed description of the project can be found here
+                        https://gitlab.cba.mit.edu/jakeread/automatakit
+
+                        One subset of ATK’s goals is to include motor control algorithms that adaptively learn their own tuning
+                        parameters during operation, to enable adaptable modular software to operate successfully with
+                        varying hardware. Among learning broadly how to design, develop and debug electrical circuits,
+                        firmware and hardware in a rapid prototyping context, the development of these algorithms are the main concentration of this project.
+
+                    </div>
+                </div>
+
+                <img width="60%"; src = "https://rcastro.mit.edu/sites/default/files/images/circuitV2Top.png">
+
+                <div id = "Role" class = "content-section">
+                    <div class = "content-section-title">Personal Role & Responsabilities</div>
+                    <div class = "content-section-content">
+                        The design goals coming from Broomba were set as follows:
+                        I will be responsible for the development of a modular, networked DC Motor Controller for robotic
+                        systems. This will include the development of an h-bridge circuit including current and position sensing
+                        hardware, as well as the firmware to control current and position loops.
+                        After hand-tuning control parameters for this controller, I will look to develop algorithms that search for
+                        the optimal set. Most importantly, I will test this adaptively tuned controller against a wide group of
+                        variable hardware.
+                        With time to spare, I will develop a personal CNC Machine using AutomataKit’s other networked control
+                        components. This is an opportunity for me to learn how to use the digital fabrication tools available to
+                        researchers in the CBA.
+
+                    </div>
+                </div>
+
+                <div id = "Circuit" class = "content-section">
+                    <div class = "content-section-title">Circuit</div>
+                    <div class = "content-section-content">
+                        This is my first attempt at a circuit board. It shall hold an H-bridge for
+                        motor control, current sensing, and SPI pins for encoder implementation.
+                        It is a board that revolves around the DRV8701 (http://www.ti.com/product/DRV8701)
+                        gate driver chip. The DRV8701 is capable of driving a varied set of MOSFETS.
+                        Chosen here are the AON7410 MOSFETS.
+                    </div>
+                </div>
+
+                <img width="60%" style ="object-fit: cover" src= "https://rcastro.mit.edu/sites/default/files/images/circuitV2Bottom.png">
+
+
+            </div>
+        </div>
+    </div>
+
+    <!--script to add links to content-->
+    <script>
+        function updateLinks(){
+            const children_ids = [].map.call(document.getElementById("project_content").getElementsByClassName("content-section"), function(node){
+                return node.id;});
+            children_ids.forEach(function(id){
+                let idLink = document.createElement('a');
+                idLink.href = "#"+id;
+                idLink.innerText=id.replace("-"," ");
+               document.getElementById("links_content").appendChild(idLink);
+            });
+        }
+
+        updateLinks();
+    </script>
+
+
+
+
+</div>
+
+
+
+</body>
+</html>

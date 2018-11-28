@@ -35,6 +35,7 @@
 
     <style>
         .home_container_all {
+            all:revert;
             margin: -7% 0px 0px 0px;
             border-radius: 15px;
             padding: 0;
@@ -133,6 +134,7 @@
             display: block;
             font-family: "Calibri";
             font-size: 25px;
+            line-height: 30px;
             width:50%;
             height:20%;
             color:#515778;
@@ -164,6 +166,7 @@
                 width:100%;
                 height:0;
                 left:0px;
+                border:0;
                 margin-top: 20%;
                 padding-top: 64%;
                 position:relative;
@@ -200,7 +203,7 @@
         <div id="home_main" class = "home-main" >
             <div class="name-tag" id="home_name_tag" >RUBEN CASTRO</div>
             <div class = "home-summary" id="home_summary">
-                Engineer ● Controls ● Student ● MIT<br>  Researcher ● Robotics Enthusiast <br>
+                Researcher ● MIT Student <br> Controls ● Robotics ● Programming <br>
                 <a style= "font-size: 30px" href = "https://rcastro.mit.edu/portfolio">View Portfolio</a>
 
 
@@ -355,6 +358,8 @@
                     (maxSize / 10).toString() + "px";
                 document.getElementById("home_name_tag").style.lineHeight =
                     (maxSize / 11).toString() + "px";
+                document.getElementById("home_summary").style.lineHeight =
+                    (maxSize / 30).toString() + "px";
                 document.getElementById("home_summary").style.fontSize=
                     (maxSize / 40).toString() + "px";
                 return;
@@ -364,6 +369,8 @@
                 (document.getElementById("home_main").getBoundingClientRect().width /10).toString() + "px";
             document.getElementById("home_name_tag").style.lineHeight =
                 (document.getElementById("home_main").getBoundingClientRect().width / 11).toString() + "px";
+            document.getElementById("home_summary").style.lineHeight =
+                (document.getElementById("home_main").getBoundingClientRect().width / 30).toString() + "px";
             document.getElementById("home_summary").style.fontSize=
                 (document.getElementById("home_main").getBoundingClientRect().width / 40).toString() + "px";
         }

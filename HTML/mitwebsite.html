@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+
+    <!--jquery frm google-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <meta charset="UTF-8">
+    <title>Sample Project</title>
+</head>
+<style>
+    .mockpage {
+        width: 70%;
+        height: 3000px;
+        margin: 30px auto;
+        background: #ffffff;
+        padding:150px 3% 0px;
+
+    }
+    .background{
+        background-image: url("sites/default/files/wallpaper.jpg");
+    // background-color: #384be6;
+    }
+
+</style>
+<body class = "background">
+
+
+<script src="sites/default/files/PortfolioItems.js"></script>
+
+<script src="sites/default/files/PortfolioWidget_JS.js"></script>
+
+<div class="mockpage" style ="background:white">
+
+    <link rel="stylesheet" href="https://rcastro.mit.edu/sites/default/files/documents/RProject.css">
+
+
+
+    <div id="DEBUG_1"></div>
+
+    <div class="project_container_all">
+
+        <div id="project-main" class = "project_main" >
+            <div id = "project-title">rcastro.mit.edu</div>
+            <hr>
+
+            <div id ="links">
+                <div style ="cursor:default;font-size:25px;color:black;font-weight: bold"> Links</div>
+
+                <a href ="https://github.com/rcastroo/rcastro_mit_edu"> Github</a>
+
+                <hr style ="pointer:default;margin:10px;">
+
+                <div id = "links_content" style="padding:0px">
+                </div>
+
+            </div>
+
+
+
+            <div id = "project_content">
+
+                <div id = "Summary" class = "content-section">
+                    <div class = "content-section-title">Summary</div>
+                    <div class = "content-section-content">
+                        Most of this website is designed from raw HTML, Javascript, and CSS. This website runs off
+                        of the MIT Drupal Cloud platform, however, each widget is individually made. I did not have much
+                        website development knowledge before starting this, however, I have extensive Java and CSS
+                        knowledge, so after some experimenting we have this!<br><br>
+
+                        Because Drupal Cloud is not easy to work with, especially if you are making custom pages and code,
+                        I resorted to editing my website on JetBrains' WebStorm and then importing to Drupal Cloud.
+                        I love Jetbrains. I made a skeleton mock page on each page on Webstorm in order to mimic the outline
+                        that Drupal Cloud puts on the page, allowing seamless transition between local editing and uploading.
+                    </div>
+
+                    <img width="70%" src = "https://rcastro.mit.edu/sites/default/files/images/rcastroPortfolioPic.png">
+                </div>
+
+
+                <div id = "Home" class = "content-section">
+                    <div class = "content-section-title">Home</div>
+                    <div class = "content-section-content">
+                        The home page is designed to give a very brief introduction into who I am. I use personal pictures in my
+                        slideshow in order for the reader to understand who I am not only professionally, but also as a person.
+                        Additionally, I have a picture on the right which is me as a word cloud of my resume and a letter of recommendation
+                        my robotics coach made for me, which ended up having just about the right words I would like. The picture is just there
+                        because I thought it was cool!
+                        <br><br>
+                        <strong>code:</strong> https://github.com/rcastroo/rcastro_mit_edu/blob/master/HTML/Home.html
+
+                    </div>
+                </div>
+
+                <div id = "Portfolio" class = "content-section">
+                    <div class = "content-section-title">Portfolio</div>
+                    <div class = "content-section-content">
+                        The Portfolio page took the most time. I dedicated dozens of hours to making sure it looks
+                        beautiful while retaining its function of easily being able to browse through all the different projects.
+                        <br><br>
+                        Each Project is composed of a title, a summary, importance, a date, a type, and a few tags to enable easy browsing.
+                        The components of each project are stored in arrays that just contain strings equal to the values.
+                        When the website is loaded, all the arrays are read and put into portfolioItem objects, which
+                        then have a html skeleton made for them, which is edited based on screen size and device type.
+                        Then each container is labeled and sorted as a small or large item based on its importance. A bar at the top
+                        ties it all together. The bar contains button specific to the most popular tags that are derived automatically
+                        on load time. Certain tags are color coded to make it easier to identify certain projects, and just overall
+                        to make the website look cooler!
+                        <br><br>
+                        <Strong>Code:</strong>https://github.com/rcastroo/rcastro_mit_edu/blob/master/HTML/PortfolioWidget.html
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--script to add links to content-->
+    <script>
+        function updateLinks(){
+            const children_ids = [].map.call(document.getElementById("project_content").getElementsByClassName("content-section"), function(node){
+                return node.id;});
+            children_ids.forEach(function(id){
+                let idLink = document.createElement('a');
+                idLink.href = "#"+id;
+                idLink.innerText=id.replace("-"," ");
+               document.getElementById("links_content").appendChild(idLink);
+            });
+        }
+
+        updateLinks();
+    </script>
+
+
+
+
+</div>
+
+
+
+</body>
+</html>

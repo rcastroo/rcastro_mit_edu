@@ -61,7 +61,7 @@ function generatePage(portfolioItems) {
 // device detection
     let HBoxsARR = [];
 
-
+    let PIsover7 = 0;
     let sorted = portfolioItems.filter(function(PI){
         let isSelected = false;
         if(selection=="All"){
@@ -71,8 +71,12 @@ function generatePage(portfolioItems) {
         return isSelected;
     }).sort(function (a, b) {
         return b.importance - a.importance;
-    })
+    });
+    sorted.forEach((PI)=> PIsover7 = PI.importance>=7? PIsover7+1:PIsover7);
+    PIsover7 = PIsover7==0? 1:PIsover7;
     let count = 0;
+
+
     let carryOverPI = null;
     if (isMobile) {
         sorted.forEach(function (pi) {
@@ -82,14 +86,15 @@ function generatePage(portfolioItems) {
         })
     } else {
         sorted.forEach(function (pi) {
-            if (count < 1) {
+            count++;
+            if (count <= PIsover7) {
                 let HBox_single = generateHBox_single(pi);
                 HBoxsARR.push(HBox_single);
 
             } else {
                 if (carryOverPI == null) {
                     //if this isn't the last PI, carry it over to create a double
-                    if (count != sorted.length - 1) {
+                    if (count != sorted.length) {
                         carryOverPI = pi;
                     } else {
                         let HBox_single = generateHBox_single(pi);
@@ -102,7 +107,6 @@ function generatePage(portfolioItems) {
                 }
 
             }
-            count++;
         });
     }
 
@@ -148,7 +152,7 @@ function test0(portfolioItems) {
      pageContainer.appendChild(generateSelectionBar(arrangedTags));
 
     //
-    currentPIs= portfolioItems
+    currentPIs= portfolioItems;
     generatePage(currentPIs);
     document.getElementById("test_container").appendChild(pageContainer);
 
@@ -261,8 +265,14 @@ function generateHBox_single(PI1) {
 //["Mechanical", "Science", "Making", "Engineering", "Potato"];
 function getColorFromType(type) {
     switch (type) {
+        case "Programming":
+        case "Java":
+            return "#3bb2c2"
+            break;
         case "MECHE":
+        case "Controls":
         case "Mechanical":
+        case "Design":
             return "#3e6dff"
             break;
         case "SCIENCE":
@@ -276,8 +286,14 @@ function getColorFromType(type) {
         case "Outreach":
             return "#ff0c03";
             break;
+        case "Robotics":
         case "Engineering":
+        case "FIRST":
             return "#FF8614";
+            break;
+        case "Embedded":
+        case "Electrical":
+            return "#631329";
             break;
 
         case "All":
@@ -310,7 +326,7 @@ function generatePISkeleton(portfolioItem) {
 
     var title = document.createElement('div');
     title.id = portfolioItem.title + "_PI_TITLE";
-    title.className = "title";
+    title.className = "port_title";
     title.innerText = portfolioItem.title;
     container.appendChild(title);
 
@@ -338,10 +354,18 @@ function generatePISkeleton(portfolioItem) {
     var summary = document.createElement('div');
     summary.id = portfolioItem.title + "_PI_SUMMARY";
     summary.className = "summary";
-    summary.innerText = portfolioItem.summary;
     summary.style.background = getColorFromType(portfolioItem.type);
     summary.style.opacity = "1.0";
     summary.style.display = "none";
+
+    var summaryText = document.createElement('div');
+    summaryText.innerText = portfolioItem.summary;
+    summaryText.style.width="100%";
+    summaryText.style.height="100%";
+    summaryText.style.display="inline-block";
+    summaryText.style.overflow="hidden"
+    summary.appendChild(summaryText)
+
     container.appendChild(summary);
 
     if(!isMobile){
