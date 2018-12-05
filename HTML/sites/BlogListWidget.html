@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<div style="width:200px;">
+
+    <script>
+
+
+        let blogs = [
+            ["test2", "https://rcastro.mit.edu/blog/test2", "Test", "Other", "12/4/2018"],
+            ["Gears", "https://rcastro.mit.edu/blog/spur-vs-helical-gears", "None", "Mechanical", "11/26/2018"],
+            ["Stephen King, On Writing", "https://rcastro.mit.edu/blog/stephen-king-writing", "None", "Writing", "11/20/2018"]
+
+
+        ]
+
+
+    </script>
+
+
+    <div id="DEBUG_1"></div>
+
+    <style type="text/css">
+
+        #blog_menu {
+            background: #C5C5C5;
+            border-radius: 5px;
+            padding: 5px 10px;
+            color: #01243B;
+            font-family: "Segoe UI Light";
+
+        }
+
+        hr {
+            border: 1px transparent;
+            border-top: 1px solid black;
+        }
+
+        ul, #blog_tree {
+            list-style-type: none;
+        }
+
+        #blog_tree {
+            margin: 0 0 0 0px;
+            padding: 0;
+        }
+
+        #blog_tree *{
+            font-size: 14px;
+            margin-left:-13px;
+
+        }
+
+        .caret {
+            cursor: pointer;
+            -webkit-user-select: none; /* Safari 3.1+ */
+            -moz-user-select: none; /* Firefox 2+ */
+            -ms-user-select: none; /* IE 10+ */
+            user-select: none;
+            font-weight:bold;
+        }
+
+        .caret::before {
+            content: "\25B6";
+            color: black;
+            display: inline-block;
+            margin-right: 6px;
+        }
+
+        .caret-down::before {
+            -ms-transform: rotate(90deg); /* IE 9 */
+            -webkit-transform: rotate(90deg); /* Safari */
+        ' transform: rotate(90 deg);
+        }
+
+        .nested {
+            display: none;
+            margin-left: 0px;
+        }
+
+        .active {
+            display: block;
+        }
+    </style>
+
+
+    <div id="blog_menu">
+        <div style="cursor:default;font-size:20px;color:black;font-weight: bold;margin-bottom:5px;">Blog Links</div>
+
+        <!--Space for recents-->
+        <div id="blog_menu_links"></div>
+        <hr style="pointer:default;margin:10px;"/>
+
+
+
+        <!--Space for tree divider sortable by date, type or project-->
+        <div style="cursor:default;font-size:20px;color:black;font-weight: bold;margin-bottom:5px;">Blog Archive</div>
+
+        <div id="blog_tree_view">
+            <div>
+                <a style="display:inline-block;width:30%;">sort by:</a>
+                <select id="sort_selector" onchange = "updateTree()" style="display:inline-block;width:50%;">
+                    <option value="type">Type</option>
+                    <option value="date">Date</option>
+                    <option value="project">Project</option>
+                </select>
+            </div>
+
+            <ul id="blog_tree">
+
+            </ul>
+
+
+        </div>
+
+
+    </div>
+
+
+    <script>
+
+        const numtomonth = ["uhh", "January", "February", "March", "April", "May", "June", "July",
+            "August", "September", "October", "November", "December"];
+
+        function updateTree() {
+            //remove previous tree
+            let base_list = document.getElementById("blog_tree");
+            let cNode = base_list.cloneNode(false);
+            base_list.parentNode.replaceChild(cNode, base_list);
+
+
+            let treemap = setupTree(blogs, document.getElementById("sort_selector").value);
+            let ul = makeTree(treemap);
+            document.getElementById("blog_tree").appendChild(ul);
+            setupTogglers()
+        }
+
+
+        //setup an treemap of the items based on the type desired
+        function setupTree(itemsArr, type) {
+
+
+            let treeView = {};
+
+
+            //sort by date
+            itemsArr = itemsArr.sort(function (i1, i2) {
+                let is1 = i1[4].split('/');
+                let is2 = i2[4].split('/');
+                let val1 = (is1[2] - 2000) * 1000 + is1[0] * 35 + is1[1];
+                let val2 = (is2[2] - 2000) * 1000 + is2[0] * 35 + is2[1];
+                return val1 - val2;
+            });
+
+            if (type == "project" || type == "type") {
+                let index = 2;
+                if (type == "project") {
+                    index = 2;
+                } else if (type == "type") {
+                    index = 3;
+                }
+
+                itemsArr.forEach(function (item) {
+                    if (treeView.hasOwnProperty(item[index])) {
+                        ;
+                        treeView[item[index]].push(item);
+                    } else {
+                        //put a new array with item into the value of this type
+                        treeView[item[index]] = [item];
+                    }
+                });
+
+            } else if (type == "date") {
+
+
+                const dateIndex = 4;
+                itemsArr.forEach(function (item) {
+                    let is = item[4].split('/');
+                    if (treeView.hasOwnProperty(is[2])) {
+                        //if the year has the month, add to that, else make a new month list
+                        if (treeView[is[2]].hasOwnProperty(numtomonth[is[0]])) {
+                            treeView[is[2]][numtomonth[is[0]]].push(item);
+                        } else {
+                            treeView[is[2]][numtomonth[is[0]]] = [item];
+                        }
+                    } else {
+                        treeView[is[2]] = {};
+                        (treeView[is[2]])[numtomonth[is[0]]] = [item];
+                    }
+                });
+                ;
+            }
+
+            return treeView;
+        }
+
+
+        function makeTree(map) {
+            let tree = document.createElement('ul');
+            Object.keys(map).forEach(function (firstkey) {
+                if (Array.isArray(map[firstkey])) {
+                    let li = document.createElement('li');
+                    let span = document.createElement('span');
+                    span.className = "caret";
+                    span.innerHTML = firstkey;
+                    li.appendChild(span);
+
+                    let ul = document.createElement('ul');
+                    ul.className = "nested";
+
+                    map[firstkey].forEach(function (item) {
+                        let subli = document.createElement('li');
+                        let suba = document.createElement('a');
+                        suba.innerText = item[0];
+                        suba.href = item[1];
+                        subli.appendChild(suba);
+                        ul.appendChild(subli);
+                    })
+
+                    li.appendChild(ul);
+                    tree.appendChild(li);
+                } else {
+                    let li = document.createElement('li');
+                    let span = document.createElement('span');
+                    span.className = "caret"
+                    span.innerHTML = firstkey;
+                    li.appendChild(span);
+
+                    let ul = makeTree(map[firstkey]);
+                    ul.className = "nested"
+                    li.appendChild(ul);
+
+
+                    tree.appendChild(li);
+                }
+            });
+            return tree;
+
+
+        }
+
+        function setupTogglers() {
+
+
+            //setup toggler
+            var toggler = document.getElementsByClassName("caret");
+            var i;
+
+            for (i = 0; i < toggler.length; i++) {
+                toggler[i].addEventListener("click", function () {
+                    this.parentElement.querySelector(".nested").classList.toggle("active");
+                    this.classList.toggle("caret-down");
+                });
+                if (i == 0) {
+                    toggler[i].click();
+                }
+            }
+        }
+
+        updateTree();
+
+
+    </script>
+
+    <script>
+        function updateLinks(){
+
+            let i=0;
+            const children_ids = [].map.call(document.getElementById("block-system-main").getElementsByClassName("views-field-title"), function(node){
+                return node.cloneNode(true);});
+            children_ids.forEach(function(id){
+                i++;
+                document.getElementById("blog_menu_links").appendChild(id);
+            });
+            let abs = document.createElement('a');
+
+        }
+
+        updateLinks();
+    </script>
+
+</div>
+
+
+</body>
+</html>

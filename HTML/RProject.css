@@ -39,13 +39,14 @@ hr{
     margin-left:5%;
     float:right;
     border-radius: 5px;
+    padding: 2px 10px;
+
 
 }
 #links *{
     color: #01243B;
     font-family: "Segoe UI Light";
     display:block;
-    padding: 2px 10px;
     cursor:pointer;
 }
 
